@@ -1,0 +1,289 @@
+/* Sanctuary Interior (Desbloqueado tras superar el Oráculo) */
+.sanctuary-section {
+  display: none;
+  min-height: 100vh;
+  padding: 120px 0 80px;
+  position: relative;
+  z-index: 10;
+  animation: sanctuaryReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sanctuary-section.unlocked {
+  display: block;
+}
+
+@keyframes sanctuaryReveal {
+  from { opacity: 0; transform: scale(0.97) translateY(30px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.sanctuary-welcome {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+}
+
+.sanctuary-halo {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--emerald-aura);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 6px 20px;
+  border-radius: 999px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+}
+
+.sanctuary-title {
+  font-family: var(--font-ceremony);
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.sanctuary-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* User Resonance Banner */
+.user-resonance-card {
+  background: linear-gradient(135deg, rgba(30, 20, 50, 0.7) 0%, rgba(15, 10, 25, 0.85) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 24px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  box-shadow: var(--shadow-elevation);
+}
+
+.user-archetype-info h4 {
+  font-family: var(--font-ceremony);
+  font-size: 1.4rem;
+  color: var(--gold-light);
+  margin-bottom: 0.3rem;
+}
+
+.user-archetype-info p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.archetype-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.archetype-tag {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-secondary);
+}
+
+/* Matches Grid */
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.match-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(14px);
+}
+
+.match-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(139, 92, 246, 0.3);
+}
+
+.match-avatar-wrapper {
+  position: relative;
+  height: 280px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.match-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.match-card:hover .match-avatar-img {
+  transform: scale(1.06);
+}
+
+.match-gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, var(--bg-deep) 0%, transparent 100%);
+}
+
+.match-synastry-pill {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(10, 6, 18, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--gold-primary);
+  border-radius: 999px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.match-body {
+  padding: 1.5rem;
+}
+
+.match-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.match-name {
+  font-family: var(--font-ceremony);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.match-sign {
+  font-size: 0.85rem;
+  color: #c084fc;
+}
+
+.match-archetype {
+  font-size: 0.82rem;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.match-bio {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.match-elements-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.4rem;
+}
+
+.element-chip {
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+}
+
+.match-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-soul-connect {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 92, 246, 0.2));
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #fff;
+  font-family: var(--font-ceremony);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-soul-connect:hover {
+  background: linear-gradient(135deg, var(--gold-primary), #9333ea);
+  color: #0b0813;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.btn-soul-pass {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.btn-soul-pass:hover {
+  border-color: rgba(244, 63, 94, 0.5);
+  color: #fb7185;
+  background: rgba(244, 63, 94, 0.1);
+}
+
+/* Toast Notification */
+.soul-toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(18, 12, 32, 0.95);
+  border: 1px solid var(--gold-primary);
+  border-radius: 999px;
+  padding: 12px 28px;
+  color: var(--gold-light);
+  font-size: 0.9rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), var(--glow-gold);
+  z-index: 2000;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.soul-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
