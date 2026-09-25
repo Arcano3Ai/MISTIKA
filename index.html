@@ -2,10 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>MÍSTIKA — Aplicación de Citas Cósmica y Sinastría de Almas</title>
-  <meta name="description" content="Mística es la plataforma de citas con la interfaz clásica de deslizamiento, pero guiada por la sinastría astral y protegida por el registro obligatorio con el Oráculo sagrado.">
-  <meta name="theme-color" content="#06040a">
+  <meta name="description" content="Mística es la app de citas con la interfaz clásica de deslizamiento optimizada para celulares, guiada por la sinastría astral y protegida por el Oráculo.">
+  <meta name="theme-color" content="#07050d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <!-- OpenGraph / Social -->
   <meta property="og:title" content="MÍSTIKA — La Aplicación de Citas del Alma">
@@ -23,6 +25,7 @@
   <link rel="stylesheet" href="css/oracle.css">
   <link rel="stylesheet" href="css/sanctuary.css">
   <link rel="stylesheet" href="css/dating-app.css">
+  <link rel="stylesheet" href="css/mobile-dating.css">
 </head>
 <body>
 
@@ -89,7 +92,7 @@
           </h1>
 
           <p class="hero-subtitle">
-            Mística posee la interfaz y dinámica de deslizamiento que ya dominas, pero con un portal inquebrantable: al registrarte, deberás superar las tres preguntas sagradas del Oráculo (dos de IA y una de Vulnerabilidad Humana) para poder ingresar al feed de citas.
+            Mística posee la interfaz y dinámica de deslizamiento optimizada para celulares, pero con un portal inquebrantable: al registrarte, deberás superar las tres preguntas sagradas del Oráculo (dos de IA y una de Vulnerabilidad Humana) para poder ingresar al feed de citas.
           </p>
 
           <div class="hero-actions">
@@ -155,7 +158,7 @@
       <section id="filosofia" class="section">
         <div class="container">
           <div class="section-header">
-            <span class="section-eyebrow">Experiencia Dating de Alta Gama</span>
+            <span class="section-eyebrow">Experiencia Dating Móvil Nativa</span>
             <h2 class="section-title">La estructura clásica, elevada</h2>
           </div>
 
@@ -166,7 +169,7 @@
               </div>
               <h3 class="pillar-title">Swipe Cards Clásico</h3>
               <p class="pillar-text">
-                Desliza a la derecha (Hilo Rojo / Like), a la izquierda (Dejar ir / Pass) o hacia arriba (Superlike) con atajos de teclado o gestos táctiles.
+                Desliza a la derecha (Hilo Rojo / Like), a la izquierda (Dejar ir / Pass) o hacia arriba (Superlike) con gestos táctiles fluidos.
               </p>
             </div>
 
@@ -197,7 +200,7 @@
               <div class="synastry-content">
                 <h3>Comienza tu Iniciación</h3>
                 <p>
-                  Crea tu perfil con tu fecha de nacimiento, calcula tu signo solar y supera las 3 preguntas sagradas para entrar al feed principal.
+                  Crea tu perfil con tu fecha de nacimiento, calcula tu signo solar y supera las 3 preguntas sagradas para entrar al feed principal de citas.
                 </p>
                 <div style="display: flex; gap: 12px; flex-wrap: wrap;">
                   <button class="btn-mystic trigger-auth-modal" data-auth-mode="register">
@@ -314,7 +317,7 @@
             </div>
             <div class="oracle-banner-text">
               <h5>Paso Obligatorio: La Prueba del Oráculo</h5>
-              <p>Al pulsar continuar, deberás responder a las 3 preguntas sagradas (2 de IA y 1 Humana) para consagrar y validar tu cuenta.</p>
+              <p>Al pulsar continuar, responderás las 3 preguntas sagradas (2 de IA y 1 Humana) para consagrar y validar tu cuenta.</p>
             </div>
           </div>
 
@@ -339,7 +342,7 @@
           </div>
 
           <button type="submit" class="btn-mystic" style="width: 100%; margin-top: 1rem;">
-            <span>Entrar al Santuario de Citas</span>
+            <span>Entrar a MÍSTIKA</span>
             <i class="fas fa-fire"></i>
           </button>
         </form>
@@ -349,255 +352,411 @@
 
 
   <!-- ============================================================ -->
-  <!-- VISTA 2: APLICACIÓN DE CITAS MÍSTIKA (2-COLUMN DATING WEB)    -->
+  <!-- VISTA 2: APLICACIÓN DE CITAS MÍSTIKA (OPTIMIZADA PARA MÓVIL) -->
   <!-- ============================================================ -->
   <div id="dating-app-main-layout" class="dating-app-main-layout">
+    <div class="mobile-app-container">
 
-    <!-- BARRA LATERAL (Matches, Chats, Perfil del Usuario) -->
-    <aside class="app-sidebar">
-      <!-- Encabezado de Usuario en la Barra Lateral -->
-      <div class="sidebar-user-header">
-        <div class="sidebar-user-info" onclick="window.datingApp.showLandingPage()" title="Ver tu perfil / Ajustes">
-          <div class="sidebar-avatar-wrapper">
-            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80" alt="Mi Avatar" class="sidebar-avatar-img" />
+      <!-- TOP APP BAR MÓVIL -->
+      <header class="mobile-top-bar">
+        <button class="top-bar-user-btn" onclick="document.querySelector('[data-view=\'view-profile\']').click()" title="Mi Perfil">
+          <div class="top-bar-avatar">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80" alt="Mi Avatar" />
           </div>
-          <div>
-            <div class="sidebar-user-name">
-              Alejandro <i class="fas fa-check-circle sidebar-user-badge" title="Humano Verificado por el Oráculo"></i>
-            </div>
-            <span style="font-size: 0.72rem; color: var(--accent-gold);">Tauro ♉ • Alquimista</span>
-          </div>
-        </div>
+        </button>
 
-        <div class="sidebar-header-actions">
-          <button class="app-icon-btn trigger-oracle" title="Revisar respuestas del Oráculo">
+        <a href="#" class="top-bar-center" onclick="document.querySelector('[data-view=\'view-discover\']').click()">
+          <svg class="top-bar-sigil" viewBox="0 0 100 100" fill="none">
+            <polygon points="50,15 85,75 15,75" stroke="currentColor" stroke-width="6" />
+            <polygon points="50,85 15,25 85,25" stroke="currentColor" stroke-width="6" />
+            <circle cx="50" cy="50" r="12" fill="currentColor" />
+          </svg>
+          <span class="top-bar-title">MÍSTIKA</span>
+        </a>
+
+        <div class="top-bar-actions">
+          <button class="mobile-icon-btn trigger-oracle" title="Revisar Oráculo">
             <i class="fas fa-eye"></i>
           </button>
-          <button class="app-icon-btn" onclick="window.datingApp.showLandingPage()" title="Salir al Portal">
+          <button class="mobile-icon-btn" onclick="window.datingApp.showLandingPage()" title="Salir al Portal">
             <i class="fas fa-sign-out-alt"></i>
           </button>
         </div>
-      </div>
+      </header>
 
-      <!-- Subpestañas de la Barra Lateral (Sincronías vs Conversaciones) -->
-      <div class="sidebar-subtabs">
-        <button id="subtab-matches" class="subtab-pill active">
-          <i class="fas fa-infinity"></i>
-          <span>Sincronías (5)</span>
-        </button>
-        <button id="subtab-chats" class="subtab-pill">
-          <i class="fas fa-comments"></i>
-          <span>Mensajes (3)</span>
-        </button>
-      </div>
+      <!-- ÁREA DE VISTAS (PESTAÑAS MÓVILES) -->
+      <div class="mobile-viewports">
 
-      <!-- Cuerpo Scrolleable de la Barra Lateral -->
-      <div class="sidebar-body">
+        <!-- ============================================================ -->
+        <!-- PESTAÑA 1: DESCUBRIR (SWIPE DECK MÓVIL)                      -->
+        <!-- ============================================================ -->
+        <section id="view-discover" class="mobile-view-pane active">
+          <div class="mobile-deck-wrapper">
 
-        <!-- SECCIÓN 1: SINCRONÍAS (MATCHES DISPONIBLES) -->
-        <div id="sidebar-section-matches">
-          <div class="section-label">Almas Sincronizadas</div>
-          <div class="sidebar-matches-grid">
-            <div class="sidebar-match-card" data-id="1">
-              <div class="sidebar-match-avatar">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Valentina" />
-              </div>
-              <span class="sidebar-match-name">Valentina</span>
+            <!-- Pila de Tarjetas Móvil -->
+            <div id="card-stack-container" class="mobile-card-stack">
+              <!-- Renderizado dinámicamente por js/dating-app.js -->
             </div>
 
-            <div class="sidebar-match-card" data-id="2">
-              <div class="sidebar-match-avatar">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Julián" />
+            <!-- Estado de Mazo Vacío -->
+            <div id="deck-empty-state" class="deck-empty">
+              <div class="deck-empty-icon">
+                <i class="fas fa-compass"></i>
               </div>
-              <span class="sidebar-match-name">Julián</span>
+              <h3 style="font-family: var(--font-ceremony); color: #fff; margin-bottom: 0.5rem; font-size: 1.25rem;">
+                Has recorrido todas las almas
+              </h3>
+              <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.2rem; max-width: 280px;">
+                Nuevas almas completan el Oráculo en cada instante. Expande tus coordenadas astrales.
+              </p>
+              <button id="btn-deck-reload" class="btn-mystic" style="padding: 10px 22px; font-size: 0.82rem;">
+                <span>Recargar Constelación</span>
+                <i class="fas fa-sync-alt"></i>
+              </button>
             </div>
 
-            <div class="sidebar-match-card" data-id="3">
-              <div class="sidebar-match-avatar">
-                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Aria" />
-              </div>
-              <span class="sidebar-match-name">Aria</span>
-            </div>
-
-            <div class="sidebar-match-card" data-id="4">
-              <div class="sidebar-match-avatar">
-                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80" alt="Mateo" />
-              </div>
-              <span class="sidebar-match-name">Mateo</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- SECCIÓN 2: CONVERSACIONES ACTIVAS -->
-        <div id="sidebar-section-chats" style="display: none;">
-          <div class="section-label">Mensajes Recientes</div>
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-
-            <div class="sidebar-chat-item active" data-id="1">
-              <div class="sidebar-chat-avatar">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Valentina" />
-              </div>
-              <div class="sidebar-chat-info">
-                <div class="sidebar-chat-header">
-                  <span class="sidebar-chat-name">Valentina</span>
-                  <span class="sidebar-chat-time">Hace 3m</span>
-                </div>
-                <div class="sidebar-chat-preview">
-                  ✨ El hilo rojo vibró justo al leer tu mensaje...
-                </div>
-              </div>
-            </div>
-
-            <div class="sidebar-chat-item" data-id="2">
-              <div class="sidebar-chat-avatar">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Julián" />
-              </div>
-              <div class="sidebar-chat-info">
-                <div class="sidebar-chat-header">
-                  <span class="sidebar-chat-name">Julián</span>
-                  <span class="sidebar-chat-time">Ayer</span>
-                </div>
-                <div class="sidebar-chat-preview">
-                  ¿Escuchaste la melodía que compuse a 432Hz?
-                </div>
-              </div>
-            </div>
-
-            <div class="sidebar-chat-item" data-id="3">
-              <div class="sidebar-chat-avatar">
-                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Aria" />
-              </div>
-              <div class="sidebar-chat-info">
-                <div class="sidebar-chat-header">
-                  <span class="sidebar-chat-name">Aria</span>
-                  <span class="sidebar-chat-time">2d</span>
-                </div>
-                <div class="sidebar-chat-preview">
-                  El telescopio está listo para la lluvia de estrellas.
-                </div>
-              </div>
+            <!-- Barra de 5 Botones de Acción Móvil -->
+            <div class="mobile-action-bar">
+              <button id="action-btn-rewind" class="m-btn m-btn-rewind" title="Deshacer (Rewind)">
+                <i class="fas fa-undo-alt"></i>
+              </button>
+              <button id="action-btn-nope" class="m-btn m-btn-nope" title="Dejar ir (Pass)">
+                <i class="fas fa-times"></i>
+              </button>
+              <button id="action-btn-super" class="m-btn m-btn-super" title="Super Resonancia (Superlike)">
+                <i class="fas fa-star"></i>
+              </button>
+              <button id="action-btn-like" class="m-btn m-btn-like" title="Entrelazar Hilo Rojo (Like)">
+                <i class="fas fa-heart"></i>
+              </button>
+              <button id="action-btn-oracle" class="m-btn m-btn-oracle" title="Consultar Sinastría del Oráculo">
+                <i class="fas fa-crystal-ball"></i>
+              </button>
             </div>
 
           </div>
-        </div>
+        </section>
 
-      </div>
-    </aside>
-
-    <!-- ÁREA CENTRAL: ESCENARIO PRINCIPAL DE DESLIZAMIENTO DE TARJETAS -->
-    <main class="app-center-stage">
-
-      <!-- Barra Superior del Escenario Central -->
-      <div class="center-top-bar">
-        <div class="oracle-consecrated-pill">
-          <i class="fas fa-shield-alt"></i>
-          <span>Oráculo Consagrado: 2 IA + 1 Humana Aprobadas</span>
-        </div>
-
-        <div style="display: flex; gap: 10px;">
-          <button class="app-icon-btn" title="Filtros de Radio y Edad">
-            <i class="fas fa-sliders-h"></i>
-          </button>
-          <button class="app-icon-btn" title="Ayuda y Seguridad Astral">
-            <i class="fas fa-question-circle"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Contenedor del Mazo Swipeable -->
-      <div class="deck-container-large">
-        <div id="card-stack-container" class="card-stack-container" style="height: 100%;">
-          <!-- Renderizado dinámicamente por js/dating-app.js -->
-        </div>
-
-        <!-- Mazo Vacío -->
-        <div id="deck-empty-state" class="deck-empty">
-          <div class="deck-empty-icon">
-            <i class="fas fa-compass"></i>
+        <!-- ============================================================ -->
+        <!-- PESTAÑA 2: RADAR CÓSMICO (EXPLORAR ALMAS CERCANAS)           -->
+        <!-- ============================================================ -->
+        <section id="view-radar" class="mobile-view-pane hide-scrollbar">
+          <div class="mobile-radar-header">
+            <h4 style="font-family: var(--font-ceremony); color: #fff; font-size: 1.15rem; margin-bottom: 4px;">Radar Cósmico</h4>
+            <p style="color: var(--text-secondary); font-size: 0.78rem;">Almas conectadas en tu coordenada astral</p>
           </div>
-          <h3 style="font-family: var(--font-ceremony); color: #fff; margin-bottom: 0.5rem;">
-            Has recorrido todas las almas de tu constelación
-          </h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.5rem; max-width: 320px;">
-            Nuevas almas completan el Oráculo en cada instante. Expande tus coordenadas para sincronizar más destinos.
-          </p>
-          <button id="btn-deck-reload" class="btn-mystic" style="padding: 10px 24px; font-size: 0.85rem;">
-            <span>Recargar Constelación</span>
-            <i class="fas fa-sync-alt"></i>
-          </button>
-        </div>
+
+          <!-- Filtros de Elementos -->
+          <div class="element-filter-chips">
+            <button class="element-chip-btn active" data-element="todos">✨ Todos</button>
+            <button class="element-chip-btn" data-element="Agua">🌊 Agua</button>
+            <button class="element-chip-btn" data-element="Fuego">🔥 Fuego</button>
+            <button class="element-chip-btn" data-element="Aire">🌪️ Aire</button>
+            <button class="element-chip-btn" data-element="Tierra">🌿 Tierra</button>
+          </div>
+
+          <!-- Grid de Perfiles en Radar -->
+          <div class="mobile-radar-grid">
+            <div class="m-radar-card chat-trigger" data-id="1" data-element="Agua">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Valentina" />
+              <div class="m-radar-overlay"></div>
+              <div class="m-radar-info">
+                <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">Valentina, 28</div>
+                <div style="font-size: 0.72rem; color: var(--accent-gold);">99.2% Sinastría • Agua</div>
+              </div>
+            </div>
+
+            <div class="m-radar-card chat-trigger" data-id="2" data-element="Fuego">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Julián" />
+              <div class="m-radar-overlay"></div>
+              <div class="m-radar-info">
+                <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">Julián, 31</div>
+                <div style="font-size: 0.72rem; color: var(--accent-gold);">97.8% Sinastría • Fuego</div>
+              </div>
+            </div>
+
+            <div class="m-radar-card chat-trigger" data-id="3" data-element="Aire">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="Aria" />
+              <div class="m-radar-overlay"></div>
+              <div class="m-radar-info">
+                <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">Aria, 29</div>
+                <div style="font-size: 0.72rem; color: var(--accent-gold);">96.5% Sinastría • Aire</div>
+              </div>
+            </div>
+
+            <div class="m-radar-card chat-trigger" data-id="4" data-element="Agua">
+              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80" alt="Mateo" />
+              <div class="m-radar-overlay"></div>
+              <div class="m-radar-info">
+                <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">Mateo, 30</div>
+                <div style="font-size: 0.72rem; color: var(--accent-gold);">95.1% Sinastría • Agua</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- PESTAÑA 3: MENSAJES & SINCRONÍAS (CHATS MÓVIL)               -->
+        <!-- ============================================================ -->
+        <section id="view-messages" class="mobile-view-pane hide-scrollbar">
+          <div class="mobile-matches-section">
+            <div class="section-label">Nuevas Sincronías (5)</div>
+            <div class="m-stories-row">
+              <div class="m-story-bubble" data-id="1">
+                <div class="m-story-ring">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Valentina" />
+                  <span class="m-online-dot"></span>
+                </div>
+                <span class="m-story-name">Valentina</span>
+              </div>
+
+              <div class="m-story-bubble" data-id="2">
+                <div class="m-story-ring">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Julián" />
+                  <span class="m-online-dot"></span>
+                </div>
+                <span class="m-story-name">Julián</span>
+              </div>
+
+              <div class="m-story-bubble" data-id="3">
+                <div class="m-story-ring">
+                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Aria" />
+                </div>
+                <span class="m-story-name">Aria</span>
+              </div>
+
+              <div class="m-story-bubble" data-id="4">
+                <div class="m-story-ring">
+                  <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80" alt="Mateo" />
+                </div>
+                <span class="m-story-name">Mateo</span>
+              </div>
+
+              <div class="m-story-bubble" data-id="5">
+                <div class="m-story-ring">
+                  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Lucía" />
+                </div>
+                <span class="m-story-name">Lucía</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conversaciones Activas -->
+          <div style="padding: 0 16px;">
+            <div class="section-label">Mensajes del Alma</div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+
+              <div class="sidebar-chat-item chat-trigger" data-id="1">
+                <div class="sidebar-chat-avatar">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Valentina" />
+                </div>
+                <div class="sidebar-chat-info">
+                  <div class="sidebar-chat-header">
+                    <span class="sidebar-chat-name">Valentina</span>
+                    <span class="sidebar-chat-time">Hace 3m</span>
+                  </div>
+                  <div class="sidebar-chat-preview">
+                    ✨ El hilo rojo vibró justo al leer tu mensaje...
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar-chat-item chat-trigger" data-id="2">
+                <div class="sidebar-chat-avatar">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Julián" />
+                </div>
+                <div class="sidebar-chat-info">
+                  <div class="sidebar-chat-header">
+                    <span class="sidebar-chat-name">Julián</span>
+                    <span class="sidebar-chat-time">Ayer</span>
+                  </div>
+                  <div class="sidebar-chat-preview">
+                    ¿Escuchaste la melodía que compuse a 432Hz?
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar-chat-item chat-trigger" data-id="3">
+                <div class="sidebar-chat-avatar">
+                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Aria" />
+                </div>
+                <div class="sidebar-chat-info">
+                  <div class="sidebar-chat-header">
+                    <span class="sidebar-chat-name">Aria</span>
+                    <span class="sidebar-chat-time">2d</span>
+                  </div>
+                  <div class="sidebar-chat-preview">
+                    El telescopio está listo para la lluvia de estrellas.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- PESTAÑA 4: MI PERFIL (MÓVIL)                                 -->
+        <!-- ============================================================ -->
+        <section id="view-profile" class="mobile-view-pane hide-scrollbar">
+          <div class="mobile-profile-pane">
+            <div class="m-profile-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&q=80" alt="Mi Avatar" />
+              <div class="profile-edit-badge" title="Cambiar Foto">
+                <i class="fas fa-camera"></i>
+              </div>
+            </div>
+
+            <h2 class="m-profile-name">Alejandro, 29</h2>
+
+            <div class="profile-badge-row">
+              <span class="card-human-verified"><i class="fas fa-heart"></i> Humano Verificado</span>
+              <span class="gate-tag ai" style="margin-bottom: 0; padding: 2px 10px; font-size: 0.7rem;">
+                Arquetipo Alquimista
+              </span>
+            </div>
+
+            <p style="color: var(--text-secondary); font-size: 0.82rem; text-align: center; max-width: 300px; margin-bottom: 1.2rem;">
+              "Buscador de sincronías, amante del silencio de montaña y las charlas interminables con café caliente."
+            </p>
+
+            <div class="profile-menu-list">
+              <div class="profile-menu-item">
+                <div class="profile-menu-item-left">
+                  <i class="fas fa-sun" style="color: var(--accent-gold);"></i>
+                  <span>Mi Carta Astral (Tauro ♉, Luna en Piscis)</span>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+
+              <div class="profile-menu-item trigger-oracle">
+                <div class="profile-menu-item-left">
+                  <i class="fas fa-scroll" style="color: #c084fc;"></i>
+                  <span>Mis Respuestas al Oráculo (2 IA + 1 Humana)</span>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+
+              <div class="profile-menu-item">
+                <div class="profile-menu-item-left">
+                  <i class="fas fa-sliders-h" style="color: #38bdf8;"></i>
+                  <span>Preferencias de Búsqueda y Distancia</span>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+
+              <div class="profile-menu-item" id="btn-profile-logout" onclick="window.datingApp.showLandingPage()">
+                <div class="profile-menu-item-left">
+                  <i class="fas fa-door-open" style="color: #f43f5e;"></i>
+                  <span>Volver al Portal Mística</span>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
 
-      <!-- Barra Inferior de Botones de Acción (Iconic Dating Controls) -->
-      <div class="deck-controls-fixed">
-        <!-- Rewind -->
-        <button id="action-btn-rewind" class="action-btn btn-rewind" title="Deshacer (← o botón)">
-          <i class="fas fa-undo-alt"></i>
-        </button>
-        <!-- Nope -->
-        <button id="action-btn-nope" class="action-btn btn-nope" title="Dejar ir / Pass (Flecha Izquierda)">
-          <i class="fas fa-times"></i>
-        </button>
-        <!-- Super Like -->
-        <button id="action-btn-super" class="action-btn btn-superlike" title="Super Resonancia (Flecha Arriba)">
-          <i class="fas fa-star"></i>
-        </button>
-        <!-- Like -->
-        <button id="action-btn-like" class="action-btn btn-like" title="Entrelazar Hilo Rojo / Like (Flecha Derecha)">
-          <i class="fas fa-heart"></i>
-        </button>
-        <!-- Oráculo Insight -->
-        <button id="action-btn-oracle" class="action-btn btn-oracle-insight" title="Consultar Sinastría del Oráculo">
-          <i class="fas fa-crystal-ball"></i>
-        </button>
-      </div>
-
-      <!-- PANEL DESPLEGABLE DE PERFIL COMPLETO (DRAWER) -->
-      <aside id="profile-detail-drawer" class="profile-detail-drawer">
-        <div class="drawer-header">
-          <h3 style="font-family: var(--font-ceremony); color: #fff; font-size: 1.2rem;">Carta del Alma</h3>
-          <button id="close-drawer-btn" class="app-icon-btn">
-            <i class="fas fa-times"></i>
+      <!-- BOTTOM SHEET MÓVIL (DETALLE DE PERFIL COMPLETO & SINASTRÍA) -->
+      <div id="mobile-profile-sheet" class="mobile-profile-sheet hide-scrollbar">
+        <div class="sheet-handle-bar">
+          <div class="sheet-handle-pill"></div>
+          <button id="close-profile-sheet-btn" class="sheet-close-btn-float">
+            <i class="fas fa-chevron-down"></i>
           </button>
         </div>
 
-        <div class="drawer-body">
-          <div class="drawer-photo-carousel">
-            <img id="drawer-img" src="" alt="Foto" />
+        <div class="sheet-body">
+          <div class="sheet-hero-photo">
+            <img id="sheet-img" src="" alt="Foto" />
           </div>
 
           <div>
-            <h2 id="drawer-name-age" style="font-family: var(--font-ceremony); font-size: 1.6rem; color: #fff;"></h2>
-            <div id="drawer-astrology" style="color: #c4b5fd; font-size: 0.9rem; margin-bottom: 6px;"></div>
-            <div id="drawer-synastry" style="color: var(--accent-gold); font-weight: 700; font-size: 0.85rem;"></div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <h2 id="sheet-name-age" style="font-family: var(--font-ceremony); font-size: 1.55rem; color: #fff;"></h2>
+              <span id="sheet-synastry-badge" class="mobile-synastry-pill" style="position: static;"></span>
+            </div>
+            <div id="sheet-astrology" style="color: #c4b5fd; font-size: 0.85rem; margin-top: 4px;"></div>
           </div>
 
-          <!-- Carta del Tarot Asignada -->
+          <!-- Desglose de Sinastría Cósmica de 4 Dimensiones -->
+          <div class="synastry-breakdown-card">
+            <div class="breakdown-header">
+              <span style="font-family: var(--font-ceremony); font-size: 0.95rem; color: var(--accent-gold);">
+                ✦ Desglose de Sinastría Cósmica
+              </span>
+              <i class="fas fa-star-of-david" style="color: var(--accent-gold);"></i>
+            </div>
+            <div class="breakdown-bars-grid">
+              <div class="breakdown-bar-item">
+                <div class="breakdown-bar-label"><span>Mente & Valores</span> <strong id="val-mente">95%</strong></div>
+                <div class="breakdown-bar-track"><div id="bar-fill-mente" class="breakdown-bar-fill"></div></div>
+              </div>
+              <div class="breakdown-bar-item">
+                <div class="breakdown-bar-label"><span>Espíritu & Karma</span> <strong id="val-espiritu">99%</strong></div>
+                <div class="breakdown-bar-track"><div id="bar-fill-espiritu" class="breakdown-bar-fill"></div></div>
+              </div>
+              <div class="breakdown-bar-item">
+                <div class="breakdown-bar-label"><span>Pasión & Alquimia</span> <strong id="val-pasion">97%</strong></div>
+                <div class="breakdown-bar-track"><div id="bar-fill-pasion" class="breakdown-bar-fill"></div></div>
+              </div>
+              <div class="breakdown-bar-item">
+                <div class="breakdown-bar-label"><span>Emoción & Ternura</span> <strong id="val-emocion">98%</strong></div>
+                <div class="breakdown-bar-track"><div id="bar-fill-emocion" class="breakdown-bar-fill"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arcano del Tarot Guía -->
           <div class="drawer-tarot-card">
-            <div class="drawer-tarot-title">Arcano Guía del Día</div>
-            <p id="drawer-tarot-text" style="color: #fff; font-size: 0.88rem; font-style: italic;"></p>
+            <div class="drawer-tarot-title">Arcano Guía del Alma</div>
+            <p id="sheet-tarot-text" style="color: #fff; font-size: 0.85rem; font-style: italic;"></p>
           </div>
 
-          <!-- Respuesta Humana al Oráculo -->
+          <!-- Prueba Humana de Vulnerabilidad -->
           <div>
-            <h4 style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-red); margin-bottom: 6px;">
+            <h4 style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-red); margin-bottom: 6px;">
               <i class="fas fa-heart"></i> Prueba de Latido Sensorial (Oráculo Humano)
             </h4>
-            <div id="drawer-oracle-text" class="card-oracle-quote"></div>
+            <div id="sheet-oracle-quote" class="card-oracle-quote"></div>
           </div>
 
           <!-- Bio Completa -->
           <div>
-            <h4 style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-gold); margin-bottom: 6px;">
+            <h4 style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-gold); margin-bottom: 6px;">
               Sobre Esta Alma
             </h4>
-            <p id="drawer-bio" style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;"></p>
+            <p id="sheet-bio-text" style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6;"></p>
           </div>
         </div>
-      </aside>
+      </div>
 
-    </main>
+      <!-- BARRA DE NAVEGACIÓN INFERIOR NATIVA (Bottom Tab Bar) -->
+      <nav class="mobile-bottom-tabs">
+        <button class="m-tab-item active" data-view="view-discover">
+          <i class="fas fa-fire"></i>
+          <span class="m-tab-label">Descubrir</span>
+        </button>
 
+        <button class="m-tab-item" data-view="view-radar">
+          <i class="fas fa-compass"></i>
+          <span class="m-tab-label">Radar</span>
+        </button>
+
+        <button class="m-tab-item" data-view="view-messages">
+          <i class="fas fa-comments"></i>
+          <span class="m-tab-label">Mensajes</span>
+          <span class="m-tab-badge"></span>
+        </button>
+
+        <button class="m-tab-item" data-view="view-profile">
+          <i class="fas fa-user-circle"></i>
+          <span class="m-tab-label">Perfil</span>
+        </button>
+      </nav>
+
+    </div>
   </div>
 
 
@@ -606,13 +765,13 @@
   <!-- ============================================================ -->
   <div id="match-celebration-modal" class="match-modal-overlay">
     <div class="match-modal-content">
-      <div class="section-eyebrow" style="color: var(--gold-primary); font-size: 0.85rem; letter-spacing: 0.2em;">
+      <div class="section-eyebrow" style="color: var(--gold-primary); font-size: 0.82rem; letter-spacing: 0.2em;">
         ✦ SINCRONÍA CÓSMICA ✦
       </div>
-      <h2 style="font-family: var(--font-ceremony); font-size: 1.85rem; color: #fff; margin-bottom: 0.5rem;">
+      <h2 style="font-family: var(--font-ceremony); font-size: 1.7rem; color: #fff; margin-bottom: 0.5rem;">
         ¡Habéis Entrelazado el Hilo Rojo!
       </h2>
-      <p style="color: var(--text-secondary); font-size: 0.88rem;">
+      <p style="color: var(--text-secondary); font-size: 0.85rem;">
         Tú y <strong id="match-target-name" style="color: var(--gold-light);">Valentina</strong> vibráis en la misma frecuencia cósmica con más del 98% de sinastría.
       </p>
 
