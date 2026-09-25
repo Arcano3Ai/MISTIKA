@@ -147,20 +147,27 @@ class MysticOracle {
       window.mysticAudio.playChime('normal');
     }
 
-    // AUTO-AVANCE FLUIDO TRAS 300MS: Para que el usuario nunca se quede estancado
-    setTimeout(() => {
+    if (this.nextBtn) {
+      this.nextBtn.classList.add('ready-to-send');
+      this.nextBtn.innerHTML = `<span>Enviar Respuesta</span> <i class="fas fa-arrow-right"></i>`;
+    }
+
+    // Auto-avance fluido tras 450ms o avance inmediato al pulsar 'Enviar Respuesta'
+    clearTimeout(this._autoAdvanceTimer);
+    this._autoAdvanceTimer = setTimeout(() => {
       if (stageNum === 1 && this.currentStep === 1) {
         this.goToStep(2);
       } else if (stageNum === 2 && this.currentStep === 2) {
         this.goToStep(3);
       }
-    }, 320);
+    }, 450);
   }
 
   handleNext() {
+    clearTimeout(this._autoAdvanceTimer);
     if (this.currentStep === 1) {
       if (!this.answers.q1) {
-        // Seleccionar por defecto la primera opción si pulsó continuar directamente
+        // Seleccionar por defecto la primera opción si pulsó Enviar directamente
         const firstOption = document.querySelector('#oracle-stage-1 .option-btn');
         if (firstOption) {
           this.selectOption(1, firstOption);
@@ -187,6 +194,7 @@ class MysticOracle {
   }
 
   handleBack() {
+    clearTimeout(this._autoAdvanceTimer);
     if (this.currentStep > 1 && this.currentStep <= 3) {
       this.goToStep(this.currentStep - 1);
     }
@@ -217,7 +225,9 @@ class MysticOracle {
       }
     });
 
-    // Scroll arriba en el modal para vista perfecta en celulares
+    // Scroll arriba en el cuerpo scrollable para vista perfecta
+    const scrollBody = document.querySelector('.oracle-stages-scroll-body');
+    if (scrollBody) scrollBody.scrollTop = 0;
     const sanctum = document.querySelector('.oracle-sanctum');
     if (sanctum) sanctum.scrollTop = 0;
 
@@ -226,15 +236,16 @@ class MysticOracle {
       this.backBtn.style.visibility = stepNumber > 1 ? 'visible' : 'hidden';
     }
 
-    // Texto del botón siguiente
+    // Texto del botón siguiente / Enviar Respuesta
     if (this.nextBtn) {
       const footer = document.querySelector('.oracle-footer');
       if (footer) footer.style.display = 'flex';
+      this.nextBtn.classList.remove('ready-to-send');
 
       if (stepNumber === 1 || stepNumber === 2) {
-        this.nextBtn.innerHTML = `<span>Siguiente Pregunta</span> <i class="fas fa-arrow-right"></i>`;
+        this.nextBtn.innerHTML = `<span>Enviar Respuesta</span> <i class="fas fa-arrow-right"></i>`;
       } else if (stepNumber === 3) {
-        this.nextBtn.innerHTML = `<span>Consagrar Prueba</span> <i class="fas fa-feather-alt"></i>`;
+        this.nextBtn.innerHTML = `<span>Consagrar y Enviar</span> <i class="fas fa-feather-alt"></i>`;
       }
     }
 

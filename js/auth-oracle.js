@@ -155,9 +155,11 @@ class AuthOracleManager {
     const email = document.getElementById('reg-email').value.trim();
     const birthVal = document.getElementById('reg-birthdate').value;
     const seeking = document.getElementById('reg-seeking').value;
+    const specialty = document.getElementById('reg-therapy-specialty')?.value || 'Terapeuta Holístico';
+    const certification = document.getElementById('reg-certification')?.value || 'Formación Acreditada';
 
     if (!name || !email || !birthVal) {
-      alert('Por favor completa todos tus datos astrales.');
+      alert('Por favor completa todos tus datos astrales y profesionales.');
       return;
     }
 
@@ -170,8 +172,10 @@ class AuthOracleManager {
       email,
       zodiacSign,
       seeking,
-      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80',
-      archetype: 'Arquetipo Alquimista',
+      specialty,
+      certification,
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=350&q=55',
+      archetype: specialty,
       verified: false
     };
 

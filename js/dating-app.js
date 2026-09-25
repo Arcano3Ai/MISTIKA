@@ -1,11 +1,12 @@
 /**
  * Módulo de la Interfaz Estándar de Citas de MÍSTIKA (Mobile & Desktop App)
- * - Navegación por Pestañas Móviles (Descubrir, Radar, Mensajes, Mi Perfil)
- * - Tarjetas Swipeables con gestos táctiles fluidos y sellos LIKE/NOPE/SUPER
- * - Carrusel estilo Historias (Story-bars) con toque en mitad izquierda/derecha
- * - Bottom Sheet Móvil de Detalle del Perfil con Desglose de Sinastría y Arcano
- * - Radar Cósmico con filtros de elementos (Fuego, Agua, Tierra, Aire)
- * - Celebración de Sincronía y Chat Móvil a pantalla completa
+ * Red Exclusiva para Terapeutas, Sanadores y Facilitadores Certificados
+ * - 12 Perfiles de Terapeutas con Formaciones Acreditadas, Arcanos, Sinastría y Prueba Humana
+ * - Imágenes Ligeras Web-Optimized (Baja huella de datos móvil y carga ultra rápida)
+ * - Swipe Deck con física táctil y tap zones para fotos estilo historias
+ * - Bottom Sheet con Desglose de Sinastría y acciones directas
+ * - Radar Cósmico dinámico con filtros elementales (Fuego, Agua, Aire, Tierra)
+ * - Mensajes & Nuevas Sincronías con historias y chat interactivo con IA arquetípica
  */
 
 class DatingAppManager {
@@ -15,93 +16,336 @@ class DatingAppManager {
         id: 1,
         name: "Valentina",
         age: 28,
-        astrology: "♏ Escorpio • 🌙 Luna en Piscis",
-        distance: "A 3 km • Colonia Roma",
-        archetype: "La Guardiana del Misterio",
-        synastry: "99.2%",
-        synastryBreakdown: { mente: 95, espiritu: 99, pasion: 97, emocion: 98 },
-        bio: "Amante del café amargo al amanecer, las librerías viejas y las charlas donde nadie finge. Busco a alguien que no tema navegar aguas profundas y compartir el silencio sagrado.",
-        oraclePrompt: "El olor a lluvia sobre el pavimento caliente de agosto y el escalofrío de una mirada sincera en mitad de una multitud.",
-        tarot: "La Sacerdotisa (Arcano II) — Intuición y Sabiduría Oculta",
+        astrology: "♏ Escorpio • 🌙 Luna en Piscis • Asc. Cáncer",
+        distance: "A 3 km • Consultorio Roma Norte",
+        profession: "Psicoterapeuta Transpersonal",
+        formation: "Instituto Transpersonal de México (6 años ejerciendo)",
+        archetype: "Psicoterapeuta Transpersonal & Facilitadora de Sombra",
+        synastry: "99.4%",
+        synastryBreakdown: { mente: 96, espiritu: 99, pasion: 98, emocion: 99 },
+        bio: "Acompaño a personas en procesos de integración de la sombra, duelo y memoria transgeneracional. Busco un colega terapeuta o alma despierta con la valentía de habitar el silencio sagrado y la verdad desnuda sin máscaras profesionales.",
+        oraclePrompt: "El aroma a infusión de cedrón caliente entre mis manos tras cerrar una sesión de terapia catártica en una tarde de lluvia.",
+        tarot: "La Sacerdotisa (Arcano II) — Intuición, Sabiduría Oculta y Espacio de Silencio",
         element: "Agua",
-        tags: ["Tarot", "Filosofía", "Vino Tinto", "Fotografía Analógica"],
+        tags: ["Terapia Transpersonal", "Trabajo de Sombra", "Tarot Terapéutico", "Café de Especialidad"],
         images: [
-          "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
-          "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
+          "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "✨ Qué sincronicidad leer tu carta... como terapeutas sabemos que los encuentros no son casuales.",
+        chatTime: "Hace 3m",
+        replies: [
+          "Navegar el silencio contigo se siente tan natural... Qué descanso no tener que sostener el espacio por una vez.",
+          "Me fascina tu enfoque terapéutico. La sombra no es para temerle, sino para transmutarla en oro alquímico.",
+          "¿Te apetecería tomar un café de grano etíope en una librería de la Roma este fin de semana?"
         ]
       },
       {
         id: 2,
         name: "Julián",
         age: 31,
-        astrology: "♌ Leo • 🏹 Ascendente Sagitario",
-        distance: "A 5 km • Condesa",
-        archetype: "El Arquitecto del Fuego",
-        synastry: "97.8%",
-        synastryBreakdown: { mente: 92, espiritu: 98, pasion: 99, emocion: 94 },
-        bio: "Compositor acústico y apasionado del senderismo nocturno. Mi mayor anhelo es construir una complicidad donde la libertad mutua sea nuestro mayor lazo.",
-        oraclePrompt: "El calor de la leña en una chimenea tras una caminata en la montaña mientras toco acordes con los dedos fríos.",
-        tarot: "El Sol (Arcano XIX) — Vitalidad, Verdad y Claridad",
+        astrology: "♌ Leo • 🏹 Ascendente Sagitario • 🌙 Luna en Aries",
+        distance: "A 5 km • Sala Terapéutica Condesa",
+        profession: "Sonoterapeuta en Frecuencia 432Hz",
+        formation: "Diplomado en Terapia Vibracional con Gongs y Cuencos (Escuela del Sonido Sagrado)",
+        archetype: "Sonoterapeuta Frecuencia 432Hz & Músico Bioacústico",
+        synastry: "98.2%",
+        synastryBreakdown: { mente: 94, espiritu: 98, pasion: 99, emocion: 95 },
+        bio: "Facilito baños sonoros y armonización celular con cuencos de cuarzo y gongs planetarios. Busco una compañera terapeuta con quien construir una intimidad sagrada donde la libertad mutua sea nuestro mayor lazo.",
+        oraclePrompt: "La vibración que retumba en el pecho al golpear el gong sinfónico y el silencio absoluto que queda en la sala cuando se apaga el armónico.",
+        tarot: "El Sol (Arcano XIX) — Vitalidad, Verdad y Armonía Solar",
         element: "Fuego",
-        tags: ["Música 432Hz", "Senderismo", "Poesía", "Constelaciones"],
+        tags: ["Sonoterapia 432Hz", "Cuencos de Cuarzo", "Gongs Planetarios", "Senderismo Nocturno"],
         images: [
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
-          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "¿Escuchaste la grabación binaural que compuse tras el círculo sonoro de ayer?",
+        chatTime: "Hace 15m",
+        replies: [
+          "Tu energía resuena en un tono muy limpio. Qué gozo encontrar a otra persona que comprenda el poder de la frecuencia.",
+          "La música acústica es mi medicina diaria. Me encantaría compartirte una sesión privada de cuencos.",
+          "Vamos a caminar por la montaña al caer el sol; el aire fresco despeja cualquier sobrecarga energética."
         ]
       },
       {
         id: 3,
         name: "Aria",
         age: 29,
-        astrology: "♒ Acuario • ♉ Ascendente Tauro",
-        distance: "A 7 km • Coyoacán",
-        archetype: "La Tejedora Cuántica",
-        synastry: "96.5%",
-        synastryBreakdown: { mente: 99, espiritu: 94, pasion: 90, emocion: 95 },
-        bio: "Astrofísica y herbolaria. Si me invitas a observar el paso de los cometas con un té de jazmín entre las manos, ya tienes la mitad de mi corazón.",
-        oraclePrompt: "La brisa marina a las cinco de la mañana antes de que despierte la ciudad, sintiendo la sal en los labios.",
-        tarot: "La Estrella (Arcano XVII) — Esperanza e Inspiración Pura",
+        astrology: "♒ Acuario • ♉ Ascendente Tauro • 🌙 Luna en Géminis",
+        distance: "A 7 km • Botica Holística Coyoacán",
+        profession: "Herbolaria Clínica & Flores de Bach",
+        formation: "Certificada en Fitoterapia Tradicional y Sistema Floral Australiano (8 años en consulta)",
+        archetype: "Herbolaria Clínica & Terapeuta Floral",
+        synastry: "97.6%",
+        synastryBreakdown: { mente: 99, espiritu: 95, pasion: 92, emocion: 96 },
+        bio: "Diseño elixires botánicos y fórmulas florales para tratar desequilibrios del sistema nervioso y acompañar aperturas de conciencia. Si me invitas a una tetera de té de jazmín mientras debatimos de botánica y cosmos, ya tienes mi atención.",
+        oraclePrompt: "El aroma penetrante del romero fresco machacado en el mortero de piedra y el vapor de jazmín al alba.",
+        tarot: "La Estrella (Arcano XVII) — Esperanza, Sanación Botánica y Destino",
         element: "Aire",
-        tags: ["Cosmología", "Botánica", "Cerámica", "Té Verde"],
+        tags: ["Herbolaria Clínica", "Flores de Bach", "Medicina Botánica", "Cosmología"],
         images: [
-          "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80"
+          "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "El telescopio está listo para la lluvia de estrellas de esta noche. 🌌",
+        chatTime: "Hace 1h",
+        replies: [
+          "Los fotones que vemos esta noche salieron hace millones de años para encontrarse con tus ojos.",
+          "Qué fascinante coincidencia cuántica. La sincronicidad entre nosotros es palpable.",
+          "Tengo unas hojas de té blanco de cosecha silvestre; preparemos una infusión ceremonial."
         ]
       },
       {
         id: 4,
-        name: "Mateo",
-        age: 30,
-        astrology: "♓ Piscis • ♋ Luna en Cáncer",
-        distance: "A 4 km • Polanco",
-        archetype: "El Navegante Etéreo",
-        synastry: "95.1%",
-        synastryBreakdown: { mente: 88, espiritu: 96, pasion: 92, emocion: 99 },
-        bio: "Arquitecto de espacios bioclimáticos y buceador libre. Para mí el silencio compartido no es incómodo, es el hogar del alma.",
-        oraclePrompt: "Sumergir la cabeza en el agua salada y escuchar el latido sordo del propio corazón en calma absoluta.",
-        tarot: "El Ermitaño (Arcano IX) — Introspección y Búsqueda",
-        element: "Agua",
-        tags: ["Arquitectura", "Apnea", "Piano", "Meditación"],
+        name: "Iñaki",
+        age: 33,
+        astrology: "♈ Aries • ♑ Ascendente Capricornio • 🌙 Luna en Sagitario",
+        distance: "A 4 km • Espacio Ritual Tepoztlán / Roma",
+        profession: "Facilitador de Respiración Holotrópica",
+        formation: "Formación Internacional Grof Legacy Training & Medicina Tradicional (10 años)",
+        archetype: "Facilitador de Respiración & Hombre de Fuego",
+        synastry: "98.7%",
+        synastryBreakdown: { mente: 98, espiritu: 99, pasion: 97, emocion: 93 },
+        bio: "Guío respiraciones circulares profundas para liberación de trauma reprimido y memorias perinatales. Valoro la vulnerabilidad radical y busco alguien que ya haya caminado su propio sendero de integración.",
+        oraclePrompt: "El calor húmedo del vapor sobre las piedras volcánicas del temazcal en oscuridad total y el suspiro colectivo de liberación.",
+        tarot: "El Mago (Arcano I) — Transformación de Elementos y Presencia Somática",
+        element: "Fuego",
+        tags: ["Respiración Holotrópica", "Temazcal Tradicional", "Geometría Sagrada", "Obsidiana"],
         images: [
-          "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80"
+          "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "La geometría de nuestras cartas astrales tiene un trino exacto en fuego.",
+        chatTime: "Ayer",
+        replies: [
+          "El icosaedro representa el agua y el tetraedro el fuego; juntos creamos alquimia pura.",
+          "Te invito al próximo círculo de respiración que facilito en Tepoztlán. Tu presencia sumará mucho.",
+          "Cuando honramos el cuerpo como altar, las respuestas bajan solas."
         ]
       },
       {
         id: 5,
+        name: "Solana",
+        age: 26,
+        astrology: "♋ Cáncer • ♏ Luna en Escorpio • 🌙 Ascendente Piscis",
+        distance: "A 2 km • Consultorio Coyoacán",
+        profession: "Terapeuta Onírica Gestalt",
+        formation: "Diplomado en Terapia Gestalt y Simbología Arquetípica Jungiana",
+        archetype: "Terapeuta Onírica Gestalt & Tarot Mitológico",
+        synastry: "97.9%",
+        synastryBreakdown: { mente: 94, espiritu: 98, pasion: 98, emocion: 99 },
+        bio: "Acompaño a consultantes a descifrar mensajes del inconsciente a través de sueños lúcidos, mapas del tarot y trabajo gestáltico. Busco una complicidad íntima donde podamos desarmar las corazas terapéuticas.",
+        oraclePrompt: "Las lágrimas espontáneas de alivio que brotan cuando un consultante por fin se atreve a nombrar su mayor verdad.",
+        tarot: "La Luna (Arcano XVIII) — Reinos Oníricos e Inconsciente Colectivo",
+        element: "Agua",
+        tags: ["Terapia Onírica", "Psicología Jungiana", "Tarot Mitológico", "Cristaloterapia"],
+        images: [
+          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "Soñé con un cuervo dorado antes de abrir Mística y encontrar tu latido.",
+        chatTime: "Ayer",
+        replies: [
+          "Los sueños lúcidos son la antesala del encuentro de almas. Sentí tu llegada.",
+          "La luna creciente de hoy nos invita a sembrar una semilla de complicidad honesta.",
+          "Dime qué sueñas cuando te permites no tener el control de nada."
+        ]
+      },
+      {
+        id: 6,
+        name: "Mateo",
+        age: 30,
+        astrology: "♓ Piscis • ♋ Luna en Cáncer • Asc. Escorpio",
+        distance: "A 4 km • Espacio Acuático Polanco",
+        profession: "Terapeuta Somático & Aguahara Acuático",
+        formation: "Certificado en Aguahara & Terapia Somática de Liberación de Trauma (SE)",
+        archetype: "Terapeuta Somático & Facilitador de Aguahara",
+        synastry: "96.8%",
+        synastryBreakdown: { mente: 90, espiritu: 97, pasion: 94, emocion: 99 },
+        bio: "Trabajo la memoria corporal en piscinas termales y cenotes; el agua no juzga y permite al sistema nervioso relajarse por completo. Deseo conectar con una terapeuta que valore el toque consciente y el abrazo que cura.",
+        oraclePrompt: "Sostener la cabeza de alguien en el agua tibia y sentir cómo su respiración pasa de la hiperventilación al sosiego infantil.",
+        tarot: "El Ermitaño (Arcano IX) — Silencio, Contención y Luz Interior",
+        element: "Agua",
+        tags: ["Aguahara", "Terapia Somática", "Apnea Terapéutica", "Vipassana"],
+        images: [
+          "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "Bajo el agua todo se aquieta... tu perfil me transmitió esa misma paz.",
+        chatTime: "2d",
+        replies: [
+          "Respirar con lentitud cambia la percepción del tiempo. Qué regalo leerte.",
+          "Los espacios acuáticos son el primer hogar que habitamos en el vientre. Qué dicha compartir esta visión.",
+          "¿Tocas algún instrumento o prefieres ser oyente del silencio compartido?"
+        ]
+      },
+      {
+        id: 7,
+        name: "Kalliope",
+        age: 30,
+        astrology: "♐ Sagitario • ♒ Ascendente Acuario • 🌙 Luna en Leo",
+        distance: "A 5 km • Estudio Condesa",
+        profession: "Sonoterapeuta Planetaria & Kundalini",
+        formation: "Certificación KRI 500h & Sonoterapia con Gong Planetario Sedna y Quirón",
+        archetype: "Sonoterapeuta Planetaria & Instructora de Kundalini",
+        synastry: "98.4%",
+        synastryBreakdown: { mente: 96, espiritu: 98, pasion: 97, emocion: 94 },
+        bio: "Utilizo el gong de Quirón para sanar la herida del sanador. Busco un compañero terapeuta que no le tema al poder del prana ni a la intensidad de un vínculo sin caretas profesionales.",
+        oraclePrompt: "Cantar el mantra Adi Shakti al amanecer y sentir la piel erizada por la vibración comunitaria en la sala.",
+        tarot: "La Rueda de la Fortuna (Arcano X) — Sincronicidad Cósmica y Resonancia Universal",
+        element: "Fuego",
+        tags: ["Gong Planetario", "Kundalini Terapéutico", "Sanador Herido", "Chakraterapia"],
+        images: [
+          "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "Afiné mi cuenco en la nota FA para ti... el chakra corazón vibró al instante.",
+        chatTime: "2d",
+        replies: [
+          "El sonido es la primera manifestación del universo: Naad Brahma.",
+          "Me encantaría darte un baño sonoro privado; tu campo áurico pide expansión y ligereza.",
+          "Qué alegría encontrar a alguien con quien sintonizar sin distorsión."
+        ]
+      },
+      {
+        id: 8,
+        name: "Damián",
+        age: 32,
+        astrology: "♉ Tauro • ♍ Luna en Virgo • Asc. Capricornio",
+        distance: "A 6 km • Bosque de Tlalpan",
+        profession: "Constelador Familiar & Ecopsicólogo",
+        formation: "Certificado por el Centro de Estudios Sistémicos de Hellinger & Ecopsicología",
+        archetype: "Constelador Familiar & Facilitador de Ecopsicología",
+        synastry: "95.8%",
+        synastryBreakdown: { mente: 92, espiritu: 96, pasion: 94, emocion: 95 },
+        bio: "Facilito talleres de constelaciones para ordenar lealtades familiares invisibles y baños de bosque terapéuticos. Para mí el amor sano nace de reconocer el lugar de cada uno en el sistema.",
+        oraclePrompt: "La mirada de paz de un consultante cuando por fin honra y suelta el peso de su linaje familiar.",
+        tarot: "El Sumo Sacerdote (Arcano V) — Órdenes del Amor y Raíces Ancestrales",
+        element: "Tierra",
+        tags: ["Constelaciones Familiares", "Ecopsicología", "Terapia Sistémica", "Baños de Bosque"],
+        images: [
+          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "Hice pan artesanal de masa madre con romero del huerto tras una constelación. ¿Compartimos?",
+        chatTime: "3d",
+        replies: [
+          "La paciencia de la tierra nos enseña que todo lo verdadero toma tiempo para germinar.",
+          "Construyo tambores con madera caída de pino; su latido te conecta al centro del mundo.",
+          "Caminar descalzos sobre musgo húmedo cura cualquier ruido mental. Vamos cuando gustes."
+        ]
+      },
+      {
+        id: 9,
         name: "Lucía",
         age: 27,
-        astrology: "♎ Libra • ♊ Ascendente Géminis",
-        distance: "A 2 km • Juárez",
-        archetype: "La Alquimista del Viento",
-        synastry: "94.3%",
-        synastryBreakdown: { mente: 97, espiritu: 91, pasion: 93, emocion: 90 },
-        bio: "Curadora de arte contemporáneo y coleccionista de vinilos de jazz. Busco una mente despierta con quien debatir hasta el amanecer.",
-        oraclePrompt: "El roce de una bufanda de lana suave en el cuello mientras el viento otoñal despeina mi pelo en la terraza.",
-        tarot: "La Templanza (Arcano XIV) — Armonía y Alquimia Interior",
+        astrology: "♎ Libra • ♊ Ascendente Géminis • 🌙 Luna en Acuario",
+        distance: "A 2 km • Taller Terapéutico Juárez",
+        profession: "Arteterapeuta Clínica",
+        formation: "Máster en Terapias Artísticas y Expresivas (5 años de consulta)",
+        archetype: "Arteterapeuta Clínica & Psicoterapeuta Expresiva",
+        synastry: "96.1%",
+        synastryBreakdown: { mente: 97, espiritu: 93, pasion: 95, emocion: 92 },
+        bio: "Trabajo el dolor psíquico a través de la arcilla, el pigmento y el collage inconsciente. Busco un colega con quien hablar de arte, inconsciente y vida sin solemnidad fingida.",
+        oraclePrompt: "Tener las manos manchadas de carbón y óleo tras acompañar una sesión donde el lienzo dijo lo que la voz no podía.",
+        tarot: "La Templanza (Arcano XIV) — Alquimia Emocional a Través del Color",
         element: "Aire",
-        tags: ["Arte", "Vinilos", "Jazz", "Museos"],
+        tags: ["Arteterapia Clínica", "Terapia Expresiva", "Psicología del Arte", "Arcilla Terapéutica"],
         images: [
-          "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "Puse un disco de Alice Coltrane en el taller y tu presencia cósmica llegó a mi mente.",
+        chatTime: "3d",
+        replies: [
+          "El arte y la terapia tienen la misma raíz: devolverle al alma su capacidad de conmoverse.",
+          "Hay una exposición de arte hermético en San Rafael; deberíamos visitarla juntos.",
+          "Me gusta la ligereza en las palabras y la profundidad en las miradas."
+        ]
+      },
+      {
+        id: 10,
+        name: "Maya",
+        age: 27,
+        astrology: "♍ Virgo • ♉ Luna en Tauro • Asc. Cáncer",
+        distance: "A 4 km • San Ángel",
+        profession: "Kinesióloga Holística & Medicina Andina",
+        formation: "Diplomado en Kinesiología Aplicada y Acompañamiento Energético",
+        archetype: "Kinesióloga Holística & Terapeuta Tradicional",
+        synastry: "97.4%",
+        synastryBreakdown: { mente: 94, espiritu: 97, pasion: 95, emocion: 98 },
+        bio: "Testeo bioenergético a través de la respuesta muscular para desbloquear emociones atrapadas en órganos. Busco un terapeuta con alta conciencia corporal y afecto dulce.",
+        oraclePrompt: "El instante en que el cuerpo del consultante da una respuesta muscular clara y ambos comprendemos el origen de su síntoma.",
+        tarot: "La Emperatriz (Arcano III) — Sanación del Tejido Vivo y Nutrición Celular",
+        element: "Tierra",
+        tags: ["Kinesiología Holística", "Medicina Andina", "Desbloqueo Biológico", "Fitoterapia"],
+        images: [
+          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "Destilé un aceite de flor de azahar con luna llena. Te guardé una botellita para tu botiquín.",
+        chatTime: "4d",
+        replies: [
+          "Las plantas y el cuerpo no mienten: su medicina actúa en el plano sutil antes que en el físico.",
+          "Tu carta muestra una necesidad de enraizamiento dulce. Déjame prepararte una tisana.",
+          "La belleza está en los pequeños detalles cotidianos tocados por el amor."
+        ]
+      },
+      {
+        id: 11,
+        name: "Sebastián",
+        age: 29,
+        astrology: "♑ Capricornio • ♏ Ascendente Escorpio • 🌙 Luna en Tauro",
+        distance: "A 3 km • San Rafael",
+        profession: "Terapeuta Filosófico Hermético",
+        formation: "Formación en Acompañamiento Filosófico y Filosofía Terapéutica Antigua",
+        archetype: "Terapeuta Filosófico & Consejero Hermético",
+        synastry: "96.9%",
+        synastryBreakdown: { mente: 99, espiritu: 96, pasion: 95, emocion: 92 },
+        bio: "Ayudo a consultantes a reconstruir su marco de significado ante crisis de sentido vital. Busco a alguien con quien leer a los estoicos y místicos junto a una taza de té caliente sin prisa alguna.",
+        oraclePrompt: "El olor a té chai con canela y el clic mental de un consultante cuando resignifica un trauma del pasado como su mayor sabiduría.",
+        tarot: "La Justicia (Arcano XI) — Coherencia Ética, Discernimiento y Ley Sagrada",
+        element: "Tierra",
+        tags: ["Terapia Filosófica", "Acompañamiento Existencial", "Hermetismo", "Ajedrez"],
+        images: [
+          "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "Encontré un pasaje de Giordano Bruno que describe con exactitud lo que sentí al ver tu perfil.",
+        chatTime: "5d",
+        replies: [
+          "El principio hermético de correspondencia: como es arriba, es abajo; como es adentro, es afuera.",
+          "Juguemos una partida de ajedrez sin reloj mientras platicamos sobre el origen del tiempo.",
+          "La coherencia interior es la mayor belleza que puede poseer un terapeuta."
+        ]
+      },
+      {
+        id: 12,
+        name: "Gael",
+        age: 31,
+        astrology: "♏ Escorpio • ♌ Ascendente Leo • 🌙 Luna en Piscis",
+        distance: "A 2 km • Roma Norte",
+        profession: "Psicoterapeuta Gestalt & Bioenergética",
+        formation: "Certificado en Terapia Gestalt y Terapia Corporal Bioenergética (7 años de práctica)",
+        archetype: "Psicoterapeuta Gestalt & Bioenergética Reichiana",
+        synastry: "98.9%",
+        synastryBreakdown: { mente: 97, espiritu: 98, pasion: 99, emocion: 97 },
+        bio: "Trabajo la disolución de corazas corporales para que el consultante recupere su capacidad de sentir y amar. Busco a una terapeuta que habite su propia fuerza y no le tema a la verdad desnuda.",
+        oraclePrompt: "La respiración profunda e involuntaria que suelta el cuerpo cuando una coraza muscular de años por fin se rinde.",
+        tarot: "La Muerte (Arcano XIII) — Disolución de Corazas Caracteriales y Renacimiento",
+        element: "Agua",
+        tags: ["Terapia Gestalt", "Bioenergética Reichiana", "Disolución de Coraza", "Fotografía"],
+        images: [
+          "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=360&q=55",
+          "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=360&q=55"
+        ],
+        chatPreview: "Tu respuesta en el Oráculo me erizó la piel. Esa es la honestidad que busco en un colega.",
+        chatTime: "6d",
+        replies: [
+          "La verdadera intimidad empieza cuando dejamos caer las máscaras que construimos para protegernos.",
+          "Me gusta fotografiar miradas en claroscuro; los ojos siempre delatan la verdad del alma.",
+          "Brindemos con vino natural por los que no temen renacer de sus propias cenizas."
         ]
       }
     ];
@@ -115,6 +359,8 @@ class DatingAppManager {
 
   init() {
     this.renderDeck();
+    this.renderRadarGrid();
+    this.renderMessagesView();
     this.bindActionButtons();
     this.bindMobileTabs();
     this.bindProfileSheet();
@@ -223,7 +469,7 @@ class DatingAppManager {
 
     card.innerHTML = `
       <div class="card-media" style="position: absolute; top:0; left:0; width:100%; height:100%;">
-        <img src="${currentPhoto}" alt="${profile.name}" class="card-img" />
+        <img src="${currentPhoto}" alt="${profile.name}" class="card-img" loading="lazy" />
 
         <!-- Story progress bars superiores -->
         <div class="card-story-progress">
@@ -249,20 +495,24 @@ class DatingAppManager {
         <div class="mobile-name-row">
           <div class="mobile-card-name">
             ${profile.name} <span class="age">${profile.age}</span>
-            <i class="fas fa-check-circle mobile-verified-icon" title="Humano Verificado por el Oráculo"></i>
+            <i class="fas fa-certificate mobile-verified-icon" style="color: var(--accent-gold);" title="Terapeuta Certificado"></i>
           </div>
-          <button class="btn-open-sheet-circle" title="Ver carta completa">
+          <button class="btn-open-sheet-circle" title="Ver carta completa" type="button">
             <i class="fas fa-chevron-up"></i>
           </button>
         </div>
 
+        <div class="mobile-astral-row" style="color: #fde047; font-weight: 600;">
+          <i class="fas fa-spa"></i> <span>${profile.profession}</span>
+        </div>
+
         <div class="mobile-astral-row">
-          <span>${profile.astrology}</span> • <span>${profile.archetype}</span>
+          <span>${profile.astrology}</span>
         </div>
 
         <!-- Cita Sensorial del Oráculo Humano -->
         <div class="mobile-human-quote-box">
-          <span class="quote-tag"><i class="fas fa-heart"></i> Prueba Humana</span>
+          <span class="quote-tag"><i class="fas fa-heart"></i> Latido del Terapeuta</span>
           "${profile.oraclePrompt}"
         </div>
 
@@ -292,8 +542,10 @@ class DatingAppManager {
       }
     });
 
-    // Abrir Bottom Sheet
+    // Abrir Bottom Sheet al hacer clic en los detalles o el botón flecha
     const openSheetBtn = card.querySelector('.btn-open-sheet-circle');
+    const cardDetails = card.querySelector('.mobile-card-details');
+
     if (openSheetBtn) {
       openSheetBtn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -301,9 +553,20 @@ class DatingAppManager {
       });
     }
 
+    if (cardDetails) {
+      cardDetails.addEventListener('click', (e) => {
+        if (!e.target.closest('.tap-left') && !e.target.closest('.tap-right')) {
+          this.openProfileSheet(profile);
+        }
+      });
+    }
+
     return card;
   }
 
+  /* -------------------------------------------------------------
+     Física Táctil y Gestos de Swipe
+     ------------------------------------------------------------- */
   setupDragEvents(card, profile) {
     this.isDragging = false;
     this.startX = 0;
@@ -326,90 +589,112 @@ class DatingAppManager {
       const rotate = this.currentX * 0.08;
       card.style.transform = `translate(${this.currentX}px, ${this.currentY}px) rotate(${rotate}deg)`;
 
-      const likeStamp = card.querySelector('.stamp-like');
-      const nopeStamp = card.querySelector('.stamp-nope');
-      const superStamp = card.querySelector('.stamp-super');
+      // Opacidades de los sellos LIKE / NOPE / SUPER
+      const stampLike = card.querySelector('.stamp-like');
+      const stampNope = card.querySelector('.stamp-nope');
+      const stampSuper = card.querySelector('.stamp-super');
 
       if (this.currentX > 30) {
-        likeStamp.style.opacity = Math.min(1, (this.currentX - 30) / 60);
-        nopeStamp.style.opacity = 0;
+        const opacity = Math.min(1, (this.currentX - 30) / 100);
+        if (stampLike) stampLike.style.opacity = opacity;
+        if (stampNope) stampNope.style.opacity = 0;
+        if (stampSuper) stampSuper.style.opacity = 0;
       } else if (this.currentX < -30) {
-        nopeStamp.style.opacity = Math.min(1, Math.abs(this.currentX + 30) / 60);
-        likeStamp.style.opacity = 0;
+        const opacity = Math.min(1, (-this.currentX - 30) / 100);
+        if (stampNope) stampNope.style.opacity = opacity;
+        if (stampLike) stampLike.style.opacity = 0;
+        if (stampSuper) stampSuper.style.opacity = 0;
       } else if (this.currentY < -40) {
-        if (superStamp) superStamp.style.opacity = Math.min(1, Math.abs(this.currentY + 40) / 60);
+        const opacity = Math.min(1, (-this.currentY - 40) / 100);
+        if (stampSuper) stampSuper.style.opacity = opacity;
+        if (stampLike) stampLike.style.opacity = 0;
+        if (stampNope) stampNope.style.opacity = 0;
       } else {
-        likeStamp.style.opacity = 0;
-        nopeStamp.style.opacity = 0;
-        if (superStamp) superStamp.style.opacity = 0;
+        if (stampLike) stampLike.style.opacity = 0;
+        if (stampNope) stampNope.style.opacity = 0;
+        if (stampSuper) stampSuper.style.opacity = 0;
       }
     };
 
     const onEnd = () => {
       if (!this.isDragging) return;
       this.isDragging = false;
-      card.style.transition = 'transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease';
 
-      const threshold = 95;
-      if (this.currentX > threshold) {
+      const thresholdX = 90;
+      const thresholdY = -110;
+
+      if (this.currentX > thresholdX) {
         this.swipeAction('right', profile, card);
-      } else if (this.currentX < -threshold) {
+      } else if (this.currentX < -thresholdX) {
         this.swipeAction('left', profile, card);
-      } else if (this.currentY < -110) {
+      } else if (this.currentY < thresholdY) {
         this.swipeAction('up', profile, card);
       } else {
+        card.style.transition = 'transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
         card.style.transform = 'translate(0, 0) rotate(0deg)';
-        card.querySelectorAll('.swipe-stamp').forEach(s => s.style.opacity = 0);
+
+        const stampLike = card.querySelector('.stamp-like');
+        const stampNope = card.querySelector('.stamp-nope');
+        const stampSuper = card.querySelector('.stamp-super');
+        if (stampLike) stampLike.style.opacity = 0;
+        if (stampNope) stampNope.style.opacity = 0;
+        if (stampSuper) stampSuper.style.opacity = 0;
       }
     };
 
-    // Mouse
-    card.addEventListener('mousedown', (e) => {
-      if (e.target.closest('.card-tap-zone') || e.target.closest('.btn-open-sheet-circle')) return;
-      onStart(e.clientX, e.clientY);
-    });
+    // Eventos de Mouse
+    card.addEventListener('mousedown', (e) => onStart(e.clientX, e.clientY));
     window.addEventListener('mousemove', (e) => onMove(e.clientX, e.clientY));
-    window.addEventListener('mouseup', () => onEnd());
+    window.addEventListener('mouseup', onEnd);
 
-    // Touch
+    // Eventos Táctiles (Mobile Touch)
     card.addEventListener('touchstart', (e) => {
-      if (e.target.closest('.card-tap-zone') || e.target.closest('.btn-open-sheet-circle')) return;
-      onStart(e.touches[0].clientX, e.touches[0].clientY);
+      const touch = e.touches[0];
+      onStart(touch.clientX, touch.clientY);
     }, { passive: true });
+
     window.addEventListener('touchmove', (e) => {
-      if (this.isDragging && e.touches.length) onMove(e.touches[0].clientX, e.touches[0].clientY);
+      if (!this.isDragging) return;
+      const touch = e.touches[0];
+      onMove(touch.clientX, touch.clientY);
     }, { passive: true });
-    window.addEventListener('touchend', () => onEnd());
+
+    window.addEventListener('touchend', onEnd);
   }
 
   swipeAction(direction, profile, cardElement) {
-    let flyX = 0;
-    let flyY = 0;
+    if (!cardElement) return;
+
+    let translateX = 0;
+    let translateY = 0;
     let rotate = 0;
 
     if (direction === 'right') {
-      flyX = 600;
+      translateX = window.innerWidth + 300;
       rotate = 25;
       if (window.mysticAudio) window.mysticAudio.playChime('success');
       this.history.push({ profile, action: 'like' });
 
-      // Match con Valentina o Julián
-      if (profile.id === 1 || profile.id === 2) {
-        setTimeout(() => this.triggerMatchCelebration(profile), 350);
+      // Celebración de sincronía si la sinastría es superior a 97%
+      const synVal = parseFloat(profile.synastry);
+      if (synVal > 97.5) {
+        setTimeout(() => this.triggerMatchCelebration(profile), 400);
       }
     } else if (direction === 'left') {
-      flyX = -600;
+      translateX = -window.innerWidth - 300;
       rotate = -25;
+      if (window.mysticAudio) window.mysticAudio.playChime('normal');
       this.history.push({ profile, action: 'nope' });
     } else if (direction === 'up') {
-      flyY = -700;
+      translateY = -window.innerHeight - 300;
       rotate = 0;
       if (window.mysticAudio) window.mysticAudio.playChime('success');
-      this.history.push({ profile, action: 'superlike' });
+      this.history.push({ profile, action: 'super' });
       setTimeout(() => this.triggerMatchCelebration(profile), 350);
     }
 
-    cardElement.style.transform = `translate(${flyX}px, ${flyY}px) rotate(${rotate}deg)`;
+    cardElement.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease';
+    cardElement.style.transform = `translate(${translateX}px, ${translateY}px) rotate(${rotate}deg)`;
     cardElement.style.opacity = '0';
 
     setTimeout(() => {
@@ -418,13 +703,16 @@ class DatingAppManager {
     }, 280);
   }
 
+  /* -------------------------------------------------------------
+     Botones de Acción Inferiores (Barra de 5 Botones)
+     ------------------------------------------------------------- */
   bindActionButtons() {
-    const btnNope = document.getElementById('action-btn-nope');
-    const btnLike = document.getElementById('action-btn-like');
-    const btnSuper = document.getElementById('action-btn-super');
-    const btnRewind = document.getElementById('action-btn-rewind');
-    const btnOracle = document.getElementById('action-btn-oracle');
-    const btnReload = document.getElementById('btn-deck-reload');
+    const btnRewind = document.getElementById('m-btn-rewind');
+    const btnNope = document.getElementById('m-btn-nope');
+    const btnSuper = document.getElementById('m-btn-super');
+    const btnLike = document.getElementById('m-btn-like');
+    const btnOracle = document.getElementById('m-btn-oracle');
+    const btnReload = document.getElementById('btn-reload-deck');
 
     if (btnNope) {
       btnNope.addEventListener('click', () => {
@@ -455,8 +743,7 @@ class DatingAppManager {
 
     if (btnRewind) {
       btnRewind.addEventListener('click', () => {
-        if (this.history.length > 0) {
-          this.history.pop();
+        if (this.currentCardIndex > 0) {
           this.currentCardIndex = Math.max(0, this.currentCardIndex - 1);
           this.renderDeck();
           if (window.mysticAudio) window.mysticAudio.playChime('normal');
@@ -494,6 +781,41 @@ class DatingAppManager {
         sheet.classList.remove('open');
       });
     }
+
+    // Botones de acción rápida dentro del bottom sheet
+    const sheetBtnNope = document.getElementById('sheet-btn-nope');
+    const sheetBtnSuper = document.getElementById('sheet-btn-super');
+    const sheetBtnLike = document.getElementById('sheet-btn-like');
+
+    if (sheetBtnNope) {
+      sheetBtnNope.addEventListener('click', () => {
+        sheet.classList.remove('open');
+        const topCard = document.querySelector('.mobile-card-stack .swipe-card:last-child');
+        if (topCard && this.currentCardIndex < this.profiles.length) {
+          this.swipeAction('left', this.profiles[this.currentCardIndex], topCard);
+        }
+      });
+    }
+
+    if (sheetBtnSuper) {
+      sheetBtnSuper.addEventListener('click', () => {
+        sheet.classList.remove('open');
+        const topCard = document.querySelector('.mobile-card-stack .swipe-card:last-child');
+        if (topCard && this.currentCardIndex < this.profiles.length) {
+          this.swipeAction('up', this.profiles[this.currentCardIndex], topCard);
+        }
+      });
+    }
+
+    if (sheetBtnLike) {
+      sheetBtnLike.addEventListener('click', () => {
+        sheet.classList.remove('open');
+        const topCard = document.querySelector('.mobile-card-stack .swipe-card:last-child');
+        if (topCard && this.currentCardIndex < this.profiles.length) {
+          this.swipeAction('right', this.profiles[this.currentCardIndex], topCard);
+        }
+      });
+    }
   }
 
   openProfileSheet(profile) {
@@ -502,7 +824,17 @@ class DatingAppManager {
 
     document.getElementById('sheet-img').src = profile.images[0];
     document.getElementById('sheet-name-age').textContent = `${profile.name}, ${profile.age}`;
-    document.getElementById('sheet-astrology').textContent = profile.astrology;
+    document.getElementById('sheet-astrology').innerHTML = `
+      <div style="color: #fde047; font-weight: 700; margin-bottom: 2px;">
+        <i class="fas fa-certificate"></i> ${profile.profession}
+      </div>
+      <div style="font-size: 0.78rem; color: #a78bfa; margin-bottom: 4px;">
+        <i class="fas fa-graduation-cap"></i> ${profile.formation}
+      </div>
+      <div style="font-size: 0.8rem; color: #e2e8f0;">
+        ${profile.astrology} • ${profile.distance}
+      </div>
+    `;
     document.getElementById('sheet-synastry-badge').textContent = `${profile.synastry} Sinastría`;
     document.getElementById('sheet-tarot-text').textContent = profile.tarot;
     document.getElementById('sheet-oracle-quote').textContent = `"${profile.oraclePrompt}"`;
@@ -524,11 +856,108 @@ class DatingAppManager {
   }
 
   /* -------------------------------------------------------------
+     Renderizado Dinámico del Radar Cósmico
+     ------------------------------------------------------------- */
+  renderRadarGrid() {
+    const grid = document.getElementById('mobile-radar-grid');
+    if (!grid) return;
+
+    grid.innerHTML = this.profiles.map(p => `
+      <div class="m-radar-card" data-id="${p.id}" data-element="${p.element}" role="button" tabindex="0">
+        <img src="${p.images[0]}" alt="${p.name}" loading="lazy" />
+        <div class="m-radar-overlay"></div>
+        <div class="m-radar-info">
+          <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">${p.name}, ${p.age}</div>
+          <div style="font-size: 0.72rem; color: var(--accent-gold); font-weight: 600;">
+            ${p.synastry} • ${p.element}
+          </div>
+          <div style="font-size: 0.65rem; color: #fde047; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+            ${p.profession}
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    // Clic en tarjeta de radar abre el profile sheet
+    grid.querySelectorAll('.m-radar-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const id = parseInt(card.dataset.id);
+        const profile = this.profiles.find(p => p.id === id);
+        if (profile) this.openProfileSheet(profile);
+      });
+    });
+  }
+
+  /* -------------------------------------------------------------
+     Renderizado Dinámico de Mensajes & Historias de Sincronías
+     ------------------------------------------------------------- */
+  renderMessagesView() {
+    const storiesRow = document.getElementById('mobile-stories-row');
+    const chatList = document.getElementById('chat-conversations-list');
+    const matchesCount = document.getElementById('matches-count-label');
+
+    if (matchesCount) {
+      matchesCount.textContent = this.profiles.length;
+    }
+
+    if (storiesRow) {
+      storiesRow.innerHTML = this.profiles.map(p => `
+        <div class="m-story-bubble" data-id="${p.id}" role="button" tabindex="0">
+          <div class="m-story-ring">
+            <img src="${p.images[0]}" alt="${p.name}" loading="lazy" />
+            <span class="m-online-dot"></span>
+          </div>
+          <span class="m-story-name">${p.name}</span>
+        </div>
+      `).join('');
+
+      storiesRow.querySelectorAll('.m-story-bubble').forEach(bubble => {
+        bubble.addEventListener('click', () => {
+          const id = parseInt(bubble.dataset.id);
+          const profile = this.profiles.find(p => p.id === id);
+          if (profile) this.openChatWith(profile);
+        });
+      });
+    }
+
+    if (chatList) {
+      // Tomamos 6 conversaciones destacadas de terapeutas
+      const chatProfiles = this.profiles.slice(0, 6);
+      chatList.innerHTML = chatProfiles.map(p => `
+        <div class="sidebar-chat-item chat-trigger" data-id="${p.id}" role="button" tabindex="0">
+          <div class="sidebar-chat-avatar">
+            <img src="${p.images[0]}" alt="${p.name}" loading="lazy" />
+          </div>
+          <div class="sidebar-chat-info">
+            <div class="sidebar-chat-header">
+              <span class="sidebar-chat-name">${p.name}</span>
+              <span class="sidebar-chat-time">${p.chatTime || 'Hoy'}</span>
+            </div>
+            <div style="font-size: 0.7rem; color: #fde047; margin-bottom: 2px;">
+              <i class="fas fa-spa"></i> ${p.profession}
+            </div>
+            <div class="sidebar-chat-preview">
+              ${p.chatPreview || '✨ Ha sentido tu resonancia en el Oráculo...'}
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      chatList.querySelectorAll('.chat-trigger').forEach(item => {
+        item.addEventListener('click', () => {
+          const id = parseInt(item.dataset.id);
+          const profile = this.profiles.find(p => p.id === id);
+          if (profile) this.openChatWith(profile);
+        });
+      });
+    }
+  }
+
+  /* -------------------------------------------------------------
      Filtros del Radar Cósmico
      ------------------------------------------------------------- */
   bindRadarFilters() {
     const filterBtns = document.querySelectorAll('.element-chip-btn');
-    const cards = document.querySelectorAll('.m-radar-card');
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -536,6 +965,7 @@ class DatingAppManager {
         btn.classList.add('active');
         const elementFilter = btn.dataset.element;
 
+        const cards = document.querySelectorAll('.m-radar-card');
         cards.forEach(card => {
           if (elementFilter === 'todos' || card.dataset.element === elementFilter) {
             card.style.display = 'block';
@@ -550,7 +980,7 @@ class DatingAppManager {
   }
 
   /* -------------------------------------------------------------
-     Celebración de Match
+     Celebración de Sincronía
      ------------------------------------------------------------- */
   triggerMatchCelebration(profile) {
     const modal = document.getElementById('match-celebration-modal');
@@ -579,10 +1009,10 @@ class DatingAppManager {
     if (startChatBtn && modal) {
       startChatBtn.addEventListener('click', () => {
         modal.classList.remove('active');
-        // Cambiar a pestaña de mensajes
         const msgTab = document.querySelector('[data-view="view-messages"]');
         if (msgTab) msgTab.click();
-        this.openChatWith(this.profiles[0]);
+        const current = this.profiles[this.currentCardIndex - 1] || this.profiles[0];
+        this.openChatWith(current);
       });
     }
   }
@@ -591,14 +1021,6 @@ class DatingAppManager {
      Sistema de Chat Móvil
      ------------------------------------------------------------- */
   bindChatSystem() {
-    document.querySelectorAll('.chat-trigger, .m-story-bubble').forEach(item => {
-      item.addEventListener('click', () => {
-        const targetId = parseInt(item.dataset.id || '1');
-        const profile = this.profiles.find(p => p.id === targetId) || this.profiles[0];
-        this.openChatWith(profile);
-      });
-    });
-
     const closeChatBtn = document.getElementById('close-chat-btn');
     const chatOverlay = document.getElementById('chat-screen-overlay');
     if (closeChatBtn && chatOverlay) {
@@ -627,34 +1049,50 @@ class DatingAppManager {
 
         if (window.mysticAudio) window.mysticAudio.playChime('normal');
 
+        // Respuesta inteligente según el perfil del terapeuta
         setTimeout(() => {
           const replyBubble = document.createElement('div');
           replyBubble.className = 'chat-bubble received';
-          const replies = [
-            "✨ El hilo rojo vibró justo al leer tu mensaje. Qué sincronicidad tan hermosa.",
-            "Me conmovió mucho tu respuesta en el Oráculo. ¿Cuándo contemplamos las estrellas con un buen café?",
+          const currentProfile = this.activeChatProfile || this.profiles[0];
+          const pool = currentProfile.replies || [
+            "✨ Qué hermosa resonancia. Compartir la vocación terapéutica hace que cada palabra tenga peso real.",
+            "Me conmovió mucho tu respuesta en el Oráculo. ¿Cuándo nos tomamos un té de hierbas y charlamos?",
             "Siento que nuestras cartas natales estaban destinadas a cruzarse en este momento exacto."
           ];
-          replyBubble.textContent = replies[Math.floor(Math.random() * replies.length)];
+          replyBubble.textContent = pool[Math.floor(Math.random() * pool.length)];
           chatBody.appendChild(replyBubble);
           chatBody.scrollTop = chatBody.scrollHeight;
 
           if (window.mysticAudio) window.mysticAudio.playChime('success');
-        }, 1200);
+        }, 900);
       });
     }
   }
 
   openChatWith(profile) {
+    this.activeChatProfile = profile;
     const chatOverlay = document.getElementById('chat-screen-overlay');
     const chatTitle = document.getElementById('chat-active-name');
     const chatAvatar = document.getElementById('chat-active-avatar');
+    const chatSubtitle = document.getElementById('chat-active-status');
+    const chatBody = document.getElementById('chat-body-messages');
     if (!chatOverlay) return;
 
     if (chatTitle) chatTitle.textContent = `${profile.name}, ${profile.age}`;
     if (chatAvatar) chatAvatar.src = profile.images[0];
+    if (chatSubtitle) chatSubtitle.innerHTML = `<span style="color:#fde047;">${profile.profession}</span> • ${profile.synastry} afinidad`;
+
+    // Mensajes de bienvenida mística iniciales
+    if (chatBody) {
+      chatBody.innerHTML = `
+        <div class="chat-system-date">Sincronía sellada por el Oráculo ✦ ${profile.synastry} afinidad</div>
+        <div class="chat-bubble received">${profile.chatPreview || '✨ Hola colega del camino. Qué alegría coincidir en Mística.'}</div>
+      `;
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
 
     chatOverlay.classList.add('open');
+    if (window.mysticAudio) window.mysticAudio.playChime('normal');
   }
 
   bindKeyboardShortcuts() {

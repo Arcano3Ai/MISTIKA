@@ -563,3 +563,88 @@ body {
   font-size: 0.75rem;
   color: #475569;
 }
+
+/* ============================================================
+   RESPONSIVIDAD Y OPTIMIZACIÓN MÓVIL DE LA LANDING Y NAVBAR
+   (Garantiza que ningún botón se corte en celulares)
+   ============================================================ */
+.nav-btn-text-short {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 14px;
+  }
+  .nav-container {
+    padding: 0;
+    gap: 8px;
+    justify-content: space-between;
+  }
+  .brand-sigil {
+    width: 30px;
+    height: 30px;
+  }
+  .brand-name {
+    font-size: 1.35rem;
+    letter-spacing: 0.14em;
+  }
+  .nav-actions {
+    gap: 8px;
+  }
+  .audio-toggle-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+  .hero-title {
+    font-size: 2.1rem;
+    line-height: 1.25;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .hero-actions .btn-mystic,
+  .hero-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 8px 10px;
+  }
+  .brand-name {
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+  }
+  .brand-sigil {
+    width: 24px;
+    height: 24px;
+  }
+  .nav-actions {
+    gap: 5px;
+  }
+  #audio-status-text {
+    display: none;
+  }
+  .audio-toggle-btn {
+    padding: 6px 8px;
+  }
+  .nav-btn-text-full {
+    display: none;
+  }
+  .nav-btn-text-short {
+    display: inline;
+  }
+  .btn-secondary, .btn-mystic {
+    padding: 7px 11px;
+    font-size: 0.76rem;
+  }
+}

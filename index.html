@@ -3,16 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>MÍSTIKA — Aplicación de Citas Cósmica y Sinastría de Almas</title>
-  <meta name="description" content="Mística es la app de citas con la interfaz clásica de deslizamiento optimizada para celulares, guiada por la sinastría astral y protegida por el Oráculo.">
+  <title>MÍSTIKA — Red y Sinastría Exclusiva para Terapeutas Holísticos</title>
+  <meta name="description" content="Comunidad y sinastría sagrada exclusiva para terapeutas, sanadores y facilitadores de la conciencia con cursos y formaciones acreditadas.">
   <meta name="theme-color" content="#07050d">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <!-- OpenGraph / Social -->
-  <meta property="og:title" content="MÍSTIKA — La Aplicación de Citas del Alma">
-  <meta property="og:description" content="Desliza, conecta y vibra con almas afines. Registro con prueba obligatoria del Oráculo: 2 de IA y 1 de Vulnerabilidad Humana.">
+  <!-- OpenGraph / WhatsApp / Telegram Preview -->
+  <meta property="og:title" content="MÍSTIKA — Red Exclusiva de Terapeutas Holísticos y Almas Conscientes">
+  <meta property="og:description" content="Conexión sagrada y sinastría para profesionales y practicantes de terapias holísticas y alternativas. Filtro sagrado del Oráculo.">
+  <meta property="og:image" content="https://arcano3ai.github.io/MISTIKA/images/og-banner-wa.jpg">
+  <meta property="og:image:secure_url" content="https://arcano3ai.github.io/MISTIKA/images/og-banner-wa.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:url" content="https://arcano3ai.github.io/MISTIKA/">
   <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MÍSTIKA — Sinastría Exclusiva para Terapeutas Holísticos">
+  <meta name="twitter:description" content="La red exclusiva para quienes ejercen y han cursado formaciones en terapias holísticas, alternativas y de la conciencia.">
+  <meta name="twitter:image" content="https://arcano3ai.github.io/MISTIKA/images/og-banner-wa.jpg">
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,24 +67,26 @@
 
         <div class="nav-actions">
           <!-- Audio procedural 432Hz -->
-          <button id="audio-toggle-btn" class="audio-toggle-btn" title="Activar/Desactivar Frecuencia 432Hz">
+          <button id="audio-toggle-btn" class="audio-toggle-btn" title="Activar/Desactivar Frecuencia 432Hz" type="button">
             <div class="audio-wave paused">
               <span></span>
               <span></span>
               <span></span>
             </div>
-            <span id="audio-status-text">Audio 432Hz</span>
+            <span id="audio-status-text">432Hz</span>
           </button>
 
-          <!-- Iniciar Sesión -->
-          <button class="btn-secondary trigger-auth-modal" data-auth-mode="login">
+          <!-- Iniciar Sesión (Nunca cortado en móvil) -->
+          <button class="btn-secondary trigger-auth-modal btn-nav-login" data-auth-mode="login" type="button" title="Iniciar Sesión">
             <i class="fas fa-sign-in-alt"></i>
-            <span>Iniciar Sesión</span>
+            <span class="nav-btn-text-full">Iniciar Sesión</span>
+            <span class="nav-btn-text-short">Entrar</span>
           </button>
 
           <!-- Crear Cuenta / Registro (Lleva al Oráculo) -->
-          <button class="btn-mystic trigger-auth-modal" data-auth-mode="register">
-            <span>Crear Cuenta</span>
+          <button class="btn-mystic trigger-auth-modal btn-nav-register" data-auth-mode="register" type="button" title="Registro para Terapeutas">
+            <span class="nav-btn-text-full">Crear Cuenta</span>
+            <span class="nav-btn-text-short">Registro</span>
             <i class="fas fa-sparkles"></i>
           </button>
         </div>
@@ -84,33 +98,33 @@
       <section id="hero-section" class="hero">
         <div class="container">
           <div class="hero-badge">
-            <span class="spark">✦</span> La App de Citas con Sinastría y Alma Real <span class="spark">✦</span>
+            <span class="spark">✦</span> Exclusivo para Terapeutas, Sanadores y Facilitadores de la Conciencia <span class="spark">✦</span>
           </div>
 
           <h1 class="hero-title">
-            Desliza hacia la <span class="title-gradient">Verdad Cósmica</span> y no hacia lo <span class="title-astral">Superficial</span>
+            Conexión Sagrada y Sinastría para <span class="title-gradient">Terapeutas y Sanadores</span>
           </h1>
 
           <p class="hero-subtitle">
-            Mística posee la interfaz y dinámica de deslizamiento optimizada para celulares, pero con un portal inquebrantable: al registrarte, deberás superar las tres preguntas sagradas del Oráculo (dos de IA y una de Vulnerabilidad Humana) para poder ingresar al feed de citas.
+            MÍSTIKA es la primera aplicación de citas y sinastría diseñada exclusivamente para profesionales que han cursado formaciones acreditadas y ejercen la terapia (Gestalt, Transpersonal, Sonoterapia, Constelaciones, Herbolaria y Medicina Ancestral). Un santuario donde quien acompaña a otros encuentra a su verdadero compañero de alma afín.
           </p>
 
           <div class="hero-actions">
             <!-- Botón Crear Cuenta (Onboarding con Oráculo) -->
-            <button class="btn-mystic trigger-auth-modal" data-auth-mode="register" id="hero-cta-btn">
-              <span>Registrarse y Consultar al Oráculo</span>
+            <button class="btn-mystic trigger-auth-modal" data-auth-mode="register" id="hero-cta-btn" type="button">
+              <span>Registrarse como Terapeuta</span>
               <i class="fas fa-feather-alt"></i>
             </button>
             <!-- Explorar directamente la App de Citas -->
-            <button class="btn-secondary trigger-auth-modal" data-auth-mode="login">
-              <span>Entrar a la App de Citas</span>
-              <i class="fas fa-fire"></i>
+            <button class="btn-secondary trigger-auth-modal" data-auth-mode="login" type="button">
+              <i class="fas fa-sign-in-alt"></i>
+              <span>Entrar / Iniciar Sesión</span>
             </button>
           </div>
 
           <div class="oracle-pulse-hint">
             <span class="pulse-dot"></span>
-            <span>Filtro de Registro: 2 preguntas de IA Cósmica + 1 prueba de Latido Humano</span>
+            <span>Acceso Reservado: Acreditación de Disciplina Terapéutica + Oráculo de 3 Preguntas</span>
           </div>
         </div>
       </section>
@@ -287,8 +301,28 @@
           </div>
 
           <div class="auth-form-group">
-            <label class="auth-label" for="reg-email">Correo Electrónico</label>
+            <label class="auth-label" for="reg-email">Correo Electrónico Profesional</label>
             <input type="email" id="reg-email" class="auth-input" placeholder="tu.alma@correo.com" required />
+          </div>
+
+          <div class="auth-row-2">
+            <div class="auth-form-group">
+              <label class="auth-label" for="reg-therapy-specialty">Disciplina / Terapia que Ejerces</label>
+              <select id="reg-therapy-specialty" class="auth-input">
+                <option value="Psicoterapeuta Transpersonal / Gestalt">Psicoterapeuta Transpersonal / Gestalt</option>
+                <option value="Sonoterapeuta Frecuencia 432Hz / Cuencos">Sonoterapeuta (432Hz / Cuencos / Gongs)</option>
+                <option value="Constelador Familiar & Sistémico">Constelador Familiar & Terapia Sistémica</option>
+                <option value="Herbolario Clínico & Medicina Ancestral">Herbolario Clínico & Medicina Ancestral</option>
+                <option value="Facilitador de Respiración & Temazcal">Facilitador de Respiración & Temazcal</option>
+                <option value="Acupuntor & Med. Tradicional China">Acupuntor & Med. Tradicional China</option>
+                <option value="Astrólogo Terapéutico & Tarot Arquetípico">Astrólogo Terapéutico & Tarot Arquetípico</option>
+                <option value="Terapeuta Corporal & Kinesiología">Terapeuta Corporal & Kinesiología</option>
+              </select>
+            </div>
+            <div class="auth-form-group">
+              <label class="auth-label" for="reg-certification">Cursos o Escuela de Formación</label>
+              <input type="text" id="reg-certification" class="auth-input" placeholder="Ej: Instituto Gestalt, Escuela Sagrada..." required />
+            </div>
           </div>
 
           <div class="auth-row-2">
@@ -305,7 +339,7 @@
               <select id="reg-seeking" class="auth-input">
                 <option value="mujeres">Mujeres</option>
                 <option value="hombres">Hombres</option>
-                <option value="todos">Todas las Almas</option>
+                <option value="todos">Todas las Almas Terapeutas</option>
               </select>
             </div>
           </div>
@@ -313,11 +347,11 @@
           <!-- Banner Informativo del Oráculo Obligatorio -->
           <div class="oracle-required-banner">
             <div class="oracle-banner-icon">
-              <i class="fas fa-eye"></i>
+              <i class="fas fa-certificate" style="color: var(--accent-gold);"></i>
             </div>
             <div class="oracle-banner-text">
-              <h5>Paso Obligatorio: La Prueba del Oráculo</h5>
-              <p>Al pulsar continuar, responderás las 3 preguntas sagradas (2 de IA y 1 Humana) para consagrar y validar tu cuenta.</p>
+              <h5>Exclusivo para Terapeutas Egresados y Activos</h5>
+              <p>MÍSTIKA verifica tu disciplina y vocación. Al continuar, responderás las 3 preguntas sagradas del Oráculo para validar tu resonancia.</p>
             </div>
           </div>
 
@@ -455,43 +489,9 @@
             <button class="element-chip-btn" data-element="Tierra">🌿 Tierra</button>
           </div>
 
-          <!-- Grid de Perfiles en Radar -->
-          <div class="mobile-radar-grid">
-            <div class="m-radar-card chat-trigger" data-id="1" data-element="Agua">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Valentina" />
-              <div class="m-radar-overlay"></div>
-              <div class="m-radar-info">
-                <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">Valentina, 28</div>
-                <div style="font-size: 0.72rem; color: var(--accent-gold);">99.2% Sinastría • Agua</div>
-              </div>
-            </div>
-
-            <div class="m-radar-card chat-trigger" data-id="2" data-element="Fuego">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Julián" />
-              <div class="m-radar-overlay"></div>
-              <div class="m-radar-info">
-                <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">Julián, 31</div>
-                <div style="font-size: 0.72rem; color: var(--accent-gold);">97.8% Sinastría • Fuego</div>
-              </div>
-            </div>
-
-            <div class="m-radar-card chat-trigger" data-id="3" data-element="Aire">
-              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="Aria" />
-              <div class="m-radar-overlay"></div>
-              <div class="m-radar-info">
-                <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">Aria, 29</div>
-                <div style="font-size: 0.72rem; color: var(--accent-gold);">96.5% Sinastría • Aire</div>
-              </div>
-            </div>
-
-            <div class="m-radar-card chat-trigger" data-id="4" data-element="Agua">
-              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80" alt="Mateo" />
-              <div class="m-radar-overlay"></div>
-              <div class="m-radar-info">
-                <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">Mateo, 30</div>
-                <div style="font-size: 0.72rem; color: var(--accent-gold);">95.1% Sinastría • Agua</div>
-              </div>
-            </div>
+          <!-- Grid de Perfiles en Radar Dinámico -->
+          <div id="mobile-radar-grid" class="mobile-radar-grid">
+            <!-- Se puebla dinámicamente con los 12 perfiles esotéricos -->
           </div>
         </section>
 
@@ -500,97 +500,16 @@
         <!-- ============================================================ -->
         <section id="view-messages" class="mobile-view-pane hide-scrollbar">
           <div class="mobile-matches-section">
-            <div class="section-label">Nuevas Sincronías (5)</div>
-            <div class="m-stories-row">
-              <div class="m-story-bubble" data-id="1">
-                <div class="m-story-ring">
-                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Valentina" />
-                  <span class="m-online-dot"></span>
-                </div>
-                <span class="m-story-name">Valentina</span>
-              </div>
-
-              <div class="m-story-bubble" data-id="2">
-                <div class="m-story-ring">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Julián" />
-                  <span class="m-online-dot"></span>
-                </div>
-                <span class="m-story-name">Julián</span>
-              </div>
-
-              <div class="m-story-bubble" data-id="3">
-                <div class="m-story-ring">
-                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Aria" />
-                </div>
-                <span class="m-story-name">Aria</span>
-              </div>
-
-              <div class="m-story-bubble" data-id="4">
-                <div class="m-story-ring">
-                  <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80" alt="Mateo" />
-                </div>
-                <span class="m-story-name">Mateo</span>
-              </div>
-
-              <div class="m-story-bubble" data-id="5">
-                <div class="m-story-ring">
-                  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Lucía" />
-                </div>
-                <span class="m-story-name">Lucía</span>
-              </div>
+            <div class="section-label">Nuevas Sincronías Cósmicas (<span id="matches-count-label">12</span>)</div>
+            <div id="mobile-stories-row" class="m-stories-row">
+              <!-- Se puebla dinámicamente con las 12 almas esotéricas -->
             </div>
           </div>
-
           <!-- Conversaciones Activas -->
           <div style="padding: 0 16px;">
             <div class="section-label">Mensajes del Alma</div>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-
-              <div class="sidebar-chat-item chat-trigger" data-id="1">
-                <div class="sidebar-chat-avatar">
-                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Valentina" />
-                </div>
-                <div class="sidebar-chat-info">
-                  <div class="sidebar-chat-header">
-                    <span class="sidebar-chat-name">Valentina</span>
-                    <span class="sidebar-chat-time">Hace 3m</span>
-                  </div>
-                  <div class="sidebar-chat-preview">
-                    ✨ El hilo rojo vibró justo al leer tu mensaje...
-                  </div>
-                </div>
-              </div>
-
-              <div class="sidebar-chat-item chat-trigger" data-id="2">
-                <div class="sidebar-chat-avatar">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Julián" />
-                </div>
-                <div class="sidebar-chat-info">
-                  <div class="sidebar-chat-header">
-                    <span class="sidebar-chat-name">Julián</span>
-                    <span class="sidebar-chat-time">Ayer</span>
-                  </div>
-                  <div class="sidebar-chat-preview">
-                    ¿Escuchaste la melodía que compuse a 432Hz?
-                  </div>
-                </div>
-              </div>
-
-              <div class="sidebar-chat-item chat-trigger" data-id="3">
-                <div class="sidebar-chat-avatar">
-                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Aria" />
-                </div>
-                <div class="sidebar-chat-info">
-                  <div class="sidebar-chat-header">
-                    <span class="sidebar-chat-name">Aria</span>
-                    <span class="sidebar-chat-time">2d</span>
-                  </div>
-                  <div class="sidebar-chat-preview">
-                    El telescopio está listo para la lluvia de estrellas.
-                  </div>
-                </div>
-              </div>
-
+            <div id="chat-conversations-list" style="display: flex; flex-direction: column; gap: 8px;">
+              <!-- Se puebla dinámicamente con las conversaciones activas -->
             </div>
           </div>
         </section>
@@ -729,6 +648,19 @@
             </h4>
             <p id="sheet-bio-text" style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6;"></p>
           </div>
+
+          <!-- Acciones Rápidas Dentro de la Carta -->
+          <div class="sheet-action-row" style="display: flex; justify-content: center; align-items: center; gap: 20px; padding: 18px 0 28px;">
+            <button id="sheet-btn-nope" class="m-btn m-btn-nope" type="button" title="Paso cósmico">
+              <i class="fas fa-times"></i>
+            </button>
+            <button id="sheet-btn-super" class="m-btn m-btn-super" type="button" title="Super Sincronía">
+              <i class="fas fa-star"></i>
+            </button>
+            <button id="sheet-btn-like" class="m-btn m-btn-like" type="button" title="Conectar">
+              <i class="fas fa-heart"></i>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -842,206 +774,212 @@
         <i class="fas fa-times"></i>
       </button>
 
-      <div class="oracle-header">
-        <div class="oracle-orb-wrapper">
-          <div class="oracle-orb"></div>
-          <div class="oracle-rune-ring"></div>
-        </div>
-        <h2 class="oracle-title">El Oráculo de Mística</h2>
-        <p class="oracle-subtitle">Prueba sagrada de registro para ingresar a la App de Citas</p>
-      </div>
-
-      <!-- Stepper: 3 Preguntas -->
-      <div class="oracle-stepper">
-        <div class="step-item active" data-step="1">
-          <div class="step-number">I</div>
-          <span>IA Cósmica</span>
-        </div>
-        <div class="step-divider"></div>
-        <div class="step-item" data-step="2">
-          <div class="step-number">II</div>
-          <span>IA Cuántica</span>
-        </div>
-        <div class="step-divider"></div>
-        <div class="step-item" data-step="3">
-          <div class="step-number">III</div>
-          <span>Latido Humano</span>
-        </div>
-      </div>
-
-      <!-- Error Notification -->
-      <div id="oracle-error-msg" class="oracle-error-msg"></div>
-
-      <!-- STAGE 1: PREGUNTA 1 (IA - Arquetipo y Geometría Astral) -->
-      <div id="oracle-stage-1" class="oracle-stage active">
-        <span class="question-badge ai-badge">
-          <i class="fas fa-brain"></i> Pregunta IA 1 de 2 • Geometría Astral
-        </span>
-        <h3 class="question-text">
-          ¿Cuál es la fuerza primordial que gobierna tu búsqueda amorosa en esta encarnación?
-        </h3>
-        <p class="question-hint">
-          Toca una opción para que el núcleo neural sintonice tu frecuencia astral (avanza automáticamente).
-        </p>
-
-        <div class="options-stack">
-          <button class="option-btn" data-value="sombra">
-            <div class="option-rune-box">ᚱ</div>
-            <div class="option-text-wrap">
-              <strong>La Alquimia de la Sombra:</strong> Encontrar a alguien frente a quien no tenga que ocultar mis abismos ni heridas.
-            </div>
-            <div class="option-check-circle"><i class="fas fa-check"></i></div>
-          </button>
-          <button class="option-btn" data-value="expansion">
-            <div class="option-rune-box">ᚠ</div>
-            <div class="option-text-wrap">
-              <strong>La Expansión Cósmica:</strong> Un alma con quien viajar a los límites de la mente, el arte y la espiritualidad.
-            </div>
-            <div class="option-check-circle"><i class="fas fa-check"></i></div>
-          </button>
-          <button class="option-btn" data-value="devocion">
-            <div class="option-rune-box">ᚷ</div>
-            <div class="option-text-wrap">
-              <strong>La Devoción Incondicional:</strong> Un remanso de ternura, paz silenciosa y lealtad que trascienda el tiempo.
-            </div>
-            <div class="option-check-circle"><i class="fas fa-check"></i></div>
-          </button>
-          <button class="option-btn" data-value="pasion">
-            <div class="option-rune-box">ᚦ</div>
-            <div class="option-text-wrap">
-              <strong>El Fuego Sagrado:</strong> Una chispa volcánica de pasión viva que encienda cada fibra de mi piel.
-            </div>
-            <div class="option-check-circle"><i class="fas fa-check"></i></div>
-          </button>
-        </div>
-      </div>
-
-      <!-- STAGE 2: PREGUNTA 2 (IA - Paradoja Cuántica y Sincronicidad) -->
-      <div id="oracle-stage-2" class="oracle-stage">
-        <span class="question-badge ai-badge">
-          <i class="fas fa-infinity"></i> Pregunta IA 2 de 2 • Paradoja Cuántica
-        </span>
-        <h3 class="question-text">
-          Si pudieras conocer el destino exacto de un gran amor antes de iniciar, sabiendo sus heridas y sus glorias, ¿qué harías?
-        </h3>
-        <p class="question-hint">
-          El algoritmo analiza tu madurez ante la incertidumbre y la autenticidad de tu entrega.
-        </p>
-
-        <div class="options-stack">
-          <button class="option-btn" data-value="caminar">
-            <div class="option-rune-box">ᛟ</div>
-            <div class="option-text-wrap">
-              <strong>Caminaría hacia ese amor:</strong> Saboreando cada instante con devoción, sin importar el desenlace.
-            </div>
-            <div class="option-check-circle"><i class="fas fa-check"></i></div>
-          </button>
-          <button class="option-btn" data-value="misterio">
-            <div class="option-rune-box">ᛞ</div>
-            <div class="option-text-wrap">
-              <strong>Rechazaría la profecía:</strong> La belleza del amor reside en la inocencia del misterio y el asombro.
-            </div>
-            <div class="option-check-circle"><i class="fas fa-check"></i></div>
-          </button>
-          <button class="option-btn" data-value="transmutar">
-            <div class="option-rune-box">ᛋ</div>
-            <div class="option-text-wrap">
-              <strong>Intentaría transmutar el destino:</strong> Usando el libre albedrío para sanar y construir juntos el camino.
-            </div>
-            <div class="option-check-circle"><i class="fas fa-check"></i></div>
-          </button>
-        </div>
-      </div>
-
-      <!-- STAGE 3: PREGUNTA 3 (HUMANA - Prueba de Latido y Vulnerabilidad Sensorial) -->
-      <div id="oracle-stage-3" class="oracle-stage">
-        <span class="question-badge human-badge">
-          <i class="fas fa-heart"></i> Pregunta Humana 3 de 3 • Prueba de Latido
-        </span>
-        <h3 class="question-text">
-          La prueba del Guardián de Carne: Evoca una sensación física o vivencia cotidiana que demuestre que habitas un cuerpo vivo con pulso y vulnerabilidad.
-        </h3>
-        <p class="question-hint">
-          Ningún modelo sintético puede sentir la sal de una lágrima o el frío en la piel. Escribe o toca una inspiración:
-        </p>
-
-        <!-- Chips de Inspiración Rápida -->
-        <div class="inspiration-chips-row">
-          <button type="button" class="inspire-chip" data-prompt="El calor de una taza de café hirviendo entre mis manos en un día helado de invierno, sintiendo el vapor en mi rostro mientras miro la lluvia.">
-            <span>☕ Taza de café caliente</span>
-          </button>
-          <button type="button" class="inspire-chip" data-prompt="El aroma a tierra mojada tras una tormenta de verano y la sensación de la hierba fresca bajo mis pies descalzos.">
-            <span>🌧️ Tierra mojada</span>
-          </button>
-          <button type="button" class="inspire-chip" data-prompt="La brisa marina helada al amanecer que me eriza la piel mientras observo el horizonte en silencio total.">
-            <span>🌊 Brisa marina</span>
-          </button>
-          <button type="button" class="inspire-chip" data-prompt="El roce de una manta suave mientras escucho mi propia respiración tranquila al quedarme dormido.">
-            <span>🕯️ Manta tibia</span>
-          </button>
-        </div>
-
-        <div class="human-input-wrapper">
-          <textarea
-            id="human-answer-input"
-            class="human-textarea"
-            placeholder="Describe con tus propias palabras o toca una de las inspiraciones de arriba..."
-            maxlength="400"
-          ></textarea>
-          <span id="human-char-counter" class="human-char-counter">0 / 25 min</span>
-        </div>
-      </div>
-
-      <!-- STAGE 4: EVALUACIÓN EN CURSO (Animación de Análisis Astral) -->
-      <div id="oracle-stage-evaluating" class="oracle-stage">
-        <div class="evaluating-container">
-          <div class="astral-scanner">
-            <div class="scanner-ring"></div>
-            <div class="scanner-core"></div>
+      <!-- Header y Pasos Fijos Superiores -->
+      <div class="oracle-top-pinned">
+        <div class="oracle-header">
+          <div class="oracle-orb-wrapper">
+            <div class="oracle-orb"></div>
+            <div class="oracle-rune-ring"></div>
           </div>
-          <h3 class="eval-status-text">El Oráculo está Escuchando</h3>
-          <p id="eval-detail-text" class="eval-step-detail">Sincronizando con los núcleos de Inteligencia Artificial...</p>
+          <h2 class="oracle-title">El Oráculo de Mística</h2>
+          <p class="oracle-subtitle">Prueba sagrada de registro para ingresar a la App de Citas</p>
         </div>
+
+        <!-- Stepper: 3 Preguntas -->
+        <div class="oracle-stepper">
+          <div class="step-item active" data-step="1">
+            <div class="step-number">I</div>
+            <span>IA Cósmica</span>
+          </div>
+          <div class="step-divider"></div>
+          <div class="step-item" data-step="2">
+            <div class="step-number">II</div>
+            <span>IA Cuántica</span>
+          </div>
+          <div class="step-divider"></div>
+          <div class="step-item" data-step="3">
+            <div class="step-number">III</div>
+            <span>Latido Humano</span>
+          </div>
+        </div>
+
+        <!-- Error Notification -->
+        <div id="oracle-error-msg" class="oracle-error-msg"></div>
       </div>
 
-      <!-- STAGE 5: VEREDICTO DE ADMISIÓN (Éxito y Desbloqueo) -->
-      <div id="oracle-stage-verdict" class="oracle-stage">
-        <div class="verdict-container">
-          <div class="verdict-sigil">✦ ᚲ ✦</div>
-          <h3 class="verdict-title">Tu Perfil ha Sido Consagrado</h3>
-          <p class="verdict-desc">
-            Las dos inteligencias han medido tu coherencia astral y el guardián humano ha certificado el calor legítimo de tu pulso. Tu cuenta ha quedado verificada y las puertas de MÍSTIKA están abiertas.
+      <!-- CUERPO SCROLLEABLE SUAVE (Permite bajar sin recortar) -->
+      <div class="oracle-stages-scroll-body hide-scrollbar">
+        <!-- STAGE 1: PREGUNTA 1 (IA - Arquetipo y Geometría Astral) -->
+        <div id="oracle-stage-1" class="oracle-stage active">
+          <span class="question-badge ai-badge">
+            <i class="fas fa-brain"></i> Pregunta IA 1 de 2 • Geometría Astral
+          </span>
+          <h3 class="question-text">
+            ¿Cuál es la fuerza primordial que gobierna tu búsqueda amorosa en esta encarnación?
+          </h3>
+          <p class="question-hint">
+            Toca una opción para seleccionarla y enviar tu respuesta al Oráculo:
           </p>
 
-          <div class="resonance-meter-box">
-            <div class="resonance-item">
-              <div class="res-val" id="user-synastry-score">98.7%</div>
-              <div class="res-label">Índice de Resonancia</div>
-            </div>
-            <div class="resonance-item">
-              <div class="res-val" style="color: var(--emerald-aura);">Aprobado</div>
-              <div class="res-label">Filtro Humano</div>
-            </div>
-            <div class="resonance-item">
-              <div class="res-val" style="color: #c084fc;">Alquimia</div>
-              <div class="res-label">Arquetipo Asignado</div>
-            </div>
+          <div class="options-stack">
+            <button class="option-btn" data-value="sombra" type="button">
+              <div class="option-rune-box">ᚱ</div>
+              <div class="option-text-wrap">
+                <strong>La Alquimia de la Sombra:</strong> Encontrar a alguien frente a quien no tenga que ocultar mis abismos ni heridas.
+              </div>
+              <div class="option-check-circle"><i class="fas fa-check"></i></div>
+            </button>
+            <button class="option-btn" data-value="expansion" type="button">
+              <div class="option-rune-box">ᚠ</div>
+              <div class="option-text-wrap">
+                <strong>La Expansión Cósmica:</strong> Un alma con quien viajar a los límites de la mente, el arte y la espiritualidad.
+              </div>
+              <div class="option-check-circle"><i class="fas fa-check"></i></div>
+            </button>
+            <button class="option-btn" data-value="devocion" type="button">
+              <div class="option-rune-box">ᚷ</div>
+              <div class="option-text-wrap">
+                <strong>La Devoción Incondicional:</strong> Un remanso de ternura, paz silenciosa y lealtad que trascienda el tiempo.
+              </div>
+              <div class="option-check-circle"><i class="fas fa-check"></i></div>
+            </button>
+            <button class="option-btn" data-value="pasion" type="button">
+              <div class="option-rune-box">ᚦ</div>
+              <div class="option-text-wrap">
+                <strong>El Fuego Sagrado:</strong> Una chispa volcánica de pasión viva que encienda cada fibra de mi piel.
+              </div>
+              <div class="option-check-circle"><i class="fas fa-check"></i></div>
+            </button>
+          </div>
+        </div>
+
+        <!-- STAGE 2: PREGUNTA 2 (IA - Paradoja Cuántica y Sincronicidad) -->
+        <div id="oracle-stage-2" class="oracle-stage">
+          <span class="question-badge ai-badge">
+            <i class="fas fa-infinity"></i> Pregunta IA 2 de 2 • Paradoja Cuántica
+          </span>
+          <h3 class="question-text">
+            Si pudieras conocer el destino exacto de un gran amor antes de iniciar, sabiendo sus heridas y sus glorias, ¿qué harías?
+          </h3>
+          <p class="question-hint">
+            El algoritmo analiza tu madurez ante la incertidumbre y la autenticidad de tu entrega.
+          </p>
+
+          <div class="options-stack">
+            <button class="option-btn" data-value="caminar" type="button">
+              <div class="option-rune-box">ᛟ</div>
+              <div class="option-text-wrap">
+                <strong>Caminaría hacia ese amor:</strong> Saboreando cada instante con devoción, sin importar el desenlace.
+              </div>
+              <div class="option-check-circle"><i class="fas fa-check"></i></div>
+            </button>
+            <button class="option-btn" data-value="misterio" type="button">
+              <div class="option-rune-box">ᛞ</div>
+              <div class="option-text-wrap">
+                <strong>Rechazaría la profecía:</strong> La belleza del amor reside en la inocencia del misterio y el asombro.
+              </div>
+              <div class="option-check-circle"><i class="fas fa-check"></i></div>
+            </button>
+            <button class="option-btn" data-value="transmutar" type="button">
+              <div class="option-rune-box">ᛋ</div>
+              <div class="option-text-wrap">
+                <strong>Intentaría transmutar el destino:</strong> Usando el libre albedrío para sanar y construir juntos el camino.
+              </div>
+              <div class="option-check-circle"><i class="fas fa-check"></i></div>
+            </button>
+          </div>
+        </div>
+
+        <!-- STAGE 3: PREGUNTA 3 (HUMANA - Prueba de Latido y Vulnerabilidad Sensorial) -->
+        <div id="oracle-stage-3" class="oracle-stage">
+          <span class="question-badge human-badge">
+            <i class="fas fa-heart"></i> Pregunta Humana 3 de 3 • Prueba de Latido
+          </span>
+          <h3 class="question-text">
+            La prueba del Guardián de Carne: Evoca una sensación física o vivencia cotidiana que demuestre que habitas un cuerpo vivo con pulso y vulnerabilidad.
+          </h3>
+          <p class="question-hint">
+            Ningún modelo sintético puede sentir la sal de una lágrima o el frío en la piel. Toca una inspiración o escribe:
+          </p>
+
+          <!-- Chips de Inspiración Rápida -->
+          <div class="inspiration-chips-row">
+            <button type="button" class="inspire-chip" data-prompt="El calor de una taza de café hirviendo entre mis manos en un día helado de invierno, sintiendo el vapor en mi rostro mientras miro la lluvia.">
+              <span>☕ Taza de café caliente</span>
+            </button>
+            <button type="button" class="inspire-chip" data-prompt="El aroma a tierra mojada tras una tormenta de verano y la sensación de la hierba fresca bajo mis pies descalzos.">
+              <span>🌧️ Tierra mojada</span>
+            </button>
+            <button type="button" class="inspire-chip" data-prompt="La brisa marina helada al amanecer que me eriza la piel mientras observo el horizonte en silencio total.">
+              <span>🌊 Brisa marina</span>
+            </button>
+            <button type="button" class="inspire-chip" data-prompt="El roce de una manta suave mientras escucho mi propia respiración tranquila al quedarme dormido.">
+              <span>🕯️ Manta tibia</span>
+            </button>
           </div>
 
-          <button id="enter-sanctuary-btn" class="btn-mystic" style="width: 100%;">
-            <span>Entrar a MÍSTIKA Dating App</span>
-            <i class="fas fa-fire"></i>
-          </button>
+          <div class="human-input-wrapper">
+            <textarea
+              id="human-answer-input"
+              class="human-textarea"
+              placeholder="Describe con tus propias palabras o toca una de las inspiraciones de arriba..."
+              maxlength="400"
+            ></textarea>
+            <span id="human-char-counter" class="human-char-counter">0 / 25 min</span>
+          </div>
+        </div>
+
+        <!-- STAGE 4: EVALUACIÓN EN CURSO (Animación de Análisis Astral) -->
+        <div id="oracle-stage-evaluating" class="oracle-stage">
+          <div class="evaluating-container">
+            <div class="astral-scanner">
+              <div class="scanner-ring"></div>
+              <div class="scanner-core"></div>
+            </div>
+            <h3 class="eval-status-text">El Oráculo está Escuchando</h3>
+            <p id="eval-detail-text" class="eval-step-detail">Sincronizando con los núcleos de Inteligencia Artificial...</p>
+          </div>
+        </div>
+
+        <!-- STAGE 5: VEREDICTO DE ADMISIÓN (Éxito y Desbloqueo) -->
+        <div id="oracle-stage-verdict" class="oracle-stage">
+          <div class="verdict-container">
+            <div class="verdict-sigil">✦ ᚲ ✦</div>
+            <h3 class="verdict-title">Tu Perfil ha Sido Consagrado</h3>
+            <p class="verdict-desc">
+              Las dos inteligencias han medido tu coherencia astral y el guardián humano ha certificado el calor legítimo de tu pulso. Tu cuenta ha quedado verificada y las puertas de MÍSTIKA están abiertas.
+            </p>
+
+            <div class="resonance-meter-box">
+              <div class="resonance-item">
+                <div class="res-val" id="user-synastry-score">99.4%</div>
+                <div class="res-label">Índice de Resonancia</div>
+              </div>
+              <div class="resonance-item">
+                <div class="res-val" style="color: var(--accent-green);">Aprobado</div>
+                <div class="res-label">Filtro Humano</div>
+              </div>
+              <div class="resonance-item">
+                <div class="res-val" style="color: #c084fc;">Alquimia</div>
+                <div class="res-label">Arquetipo Asignado</div>
+              </div>
+            </div>
+
+            <button id="enter-sanctuary-btn" class="btn-mystic" style="width: 100%;">
+              <span>Entrar a MÍSTIKA Dating App</span>
+              <i class="fas fa-fire"></i>
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- Oracle Navigation Controls -->
+      <!-- FOOTER SIEMPRE VISIBLE EN LA BASE DEL MODAL (Con botón Enviar Respuesta) -->
       <div class="oracle-footer">
-        <button id="oracle-back-btn" class="btn-oracle-back" style="visibility: hidden;">
-          <i class="fas fa-chevron-left"></i> Anterior
+        <button id="oracle-back-btn" class="btn-oracle-back" style="visibility: hidden;" type="button">
+          <i class="fas fa-chevron-left"></i> <span>Anterior</span>
         </button>
-        <button id="oracle-next-btn" class="btn-mystic" style="padding: 10px 24px; font-size: 0.85rem;">
-          <span>Continuar</span>
+        <button id="oracle-next-btn" class="btn-oracle-submit" type="button">
+          <span>Enviar Respuesta</span>
           <i class="fas fa-arrow-right"></i>
         </button>
       </div>
