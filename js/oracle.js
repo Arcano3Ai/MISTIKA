@@ -1,9 +1,9 @@
 /**
  * Motor del Oráculo de Mística
- * Gestiona el ritual de las 3 Preguntas:
- * - Pregunta 1: Inteligencia Artificial (Arquetipo y Geometría Astral)
- * - Pregunta 2: Inteligencia Artificial (Paradoja Cuántica y Sincronicidad Emocional)
- * - Pregunta 3: Humana (Prueba de Latido, Vulnerabilidad Sensorial y Calidez)
+ * - Pregunta 1: IA (Arquetipo y Geometría Astral) -> Auto-avance al seleccionar opción
+ * - Pregunta 2: IA (Paradoja Cuántica y Sincronicidad) -> Auto-avance al seleccionar opción
+ * - Pregunta 3: Humana (Prueba de Latido Sensorial) -> Chips de inspiración + validación
+ * - Ritual de Evaluación Espectral y Consagración
  */
 class MysticOracle {
   constructor() {
@@ -60,16 +60,31 @@ class MysticOracle {
       this.backBtn.addEventListener('click', () => this.handleBack());
     }
 
-    // Opciones interactivas de Pregunta 1 y 2
+    // Opciones de Pregunta 1 (IA)
     document.querySelectorAll('#oracle-stage-1 .option-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
         this.selectOption(1, btn);
       });
     });
 
+    // Opciones de Pregunta 2 (IA)
     document.querySelectorAll('#oracle-stage-2 .option-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
         this.selectOption(2, btn);
+      });
+    });
+
+    // Chips de inspiración para Pregunta 3 (Humana)
+    document.querySelectorAll('.inspire-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const text = chip.dataset.prompt;
+        if (this.humanTextarea && text) {
+          this.humanTextarea.value = text;
+          this.humanTextarea.dispatchEvent(new Event('input'));
+          if (window.mysticAudio) window.mysticAudio.playChime('human');
+        }
       });
     });
 
@@ -80,7 +95,10 @@ class MysticOracle {
         if (this.charCounter) {
           this.charCounter.textContent = `${len} / 25 min`;
           if (len >= 25) {
-            this.charCounter.style.color = 'var(--emerald-aura)';
+            this.charCounter.style.color = 'var(--accent-green)';
+            if (this.nextBtn) {
+              this.nextBtn.style.boxShadow = '0 0 25px rgba(212, 175, 55, 0.6)';
+            }
           } else {
             this.charCounter.style.color = 'var(--text-muted)';
           }
@@ -98,6 +116,8 @@ class MysticOracle {
   }
 
   openModal() {
+    if (!this.overlay) return;
+    this.goToStep(1);
     this.overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
     if (window.mysticAudio) {
@@ -106,13 +126,16 @@ class MysticOracle {
   }
 
   closeModal() {
+    if (!this.overlay) return;
     this.overlay.classList.remove('active');
     document.body.style.overflow = '';
   }
 
   selectOption(stageNum, btnElement) {
     const parent = btnElement.closest('.options-stack');
-    parent.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+    if (parent) {
+      parent.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+    }
     btnElement.classList.add('selected');
 
     const value = btnElement.dataset.value;
@@ -123,24 +146,40 @@ class MysticOracle {
     if (window.mysticAudio) {
       window.mysticAudio.playChime('normal');
     }
+
+    // AUTO-AVANCE FLUIDO TRAS 300MS: Para que el usuario nunca se quede estancado
+    setTimeout(() => {
+      if (stageNum === 1 && this.currentStep === 1) {
+        this.goToStep(2);
+      } else if (stageNum === 2 && this.currentStep === 2) {
+        this.goToStep(3);
+      }
+    }, 320);
   }
 
   handleNext() {
     if (this.currentStep === 1) {
       if (!this.answers.q1) {
-        this.showError('Por favor selecciona una orientación para que la IA calibre tu arquetipo.');
-        return;
+        // Seleccionar por defecto la primera opción si pulsó continuar directamente
+        const firstOption = document.querySelector('#oracle-stage-1 .option-btn');
+        if (firstOption) {
+          this.selectOption(1, firstOption);
+          return;
+        }
       }
       this.goToStep(2);
     } else if (this.currentStep === 2) {
       if (!this.answers.q2) {
-        this.showError('La IA requiere discernir tu postura ante el destino antes de avanzar.');
-        return;
+        const firstOption = document.querySelector('#oracle-stage-2 .option-btn');
+        if (firstOption) {
+          this.selectOption(2, firstOption);
+          return;
+        }
       }
       this.goToStep(3);
     } else if (this.currentStep === 3) {
       if (!this.answers.q3 || this.answers.q3.length < 25) {
-        this.showError('La prueba humana requiere al menos 25 caracteres para verificar latido y autenticidad real.');
+        this.showError('La prueba humana requiere al menos 25 caracteres para verificar latido real. Puedes tocar uno de los ejemplos.');
         return;
       }
       this.runEvaluationRitual();
@@ -157,16 +196,18 @@ class MysticOracle {
     this.currentStep = stepNumber;
     this.hideError();
 
-    // Actualizar pantallas
+    // Actualizar pantallas visibles
     this.steps.forEach((stage, idx) => {
-      if (idx === stepNumber - 1) {
-        stage.classList.add('active');
-      } else {
-        stage.classList.remove('active');
+      if (stage) {
+        if (idx === stepNumber - 1) {
+          stage.classList.add('active');
+        } else {
+          stage.classList.remove('active');
+        }
       }
     });
 
-    // Actualizar stepper
+    // Actualizar indicadores del stepper
     this.stepIndicators.forEach((ind, idx) => {
       ind.classList.remove('active', 'completed');
       if (idx + 1 === stepNumber) {
@@ -176,17 +217,24 @@ class MysticOracle {
       }
     });
 
-    // Visibilidad del botón Volver
+    // Scroll arriba en el modal para vista perfecta en celulares
+    const sanctum = document.querySelector('.oracle-sanctum');
+    if (sanctum) sanctum.scrollTop = 0;
+
+    // Botón Volver
     if (this.backBtn) {
       this.backBtn.style.visibility = stepNumber > 1 ? 'visible' : 'hidden';
     }
 
     // Texto del botón siguiente
     if (this.nextBtn) {
-      if (stepNumber === 3) {
+      const footer = document.querySelector('.oracle-footer');
+      if (footer) footer.style.display = 'flex';
+
+      if (stepNumber === 1 || stepNumber === 2) {
+        this.nextBtn.innerHTML = `<span>Siguiente Pregunta</span> <i class="fas fa-arrow-right"></i>`;
+      } else if (stepNumber === 3) {
         this.nextBtn.innerHTML = `<span>Consagrar Prueba</span> <i class="fas fa-feather-alt"></i>`;
-      } else {
-        this.nextBtn.innerHTML = `<span>Continuar</span> <i class="fas fa-arrow-right"></i>`;
       }
     }
 
@@ -197,21 +245,20 @@ class MysticOracle {
 
   runEvaluationRitual() {
     this.currentStep = 4;
-    // Ocultar botones de navegación durante la evaluación
-    document.querySelector('.oracle-footer').style.display = 'none';
+    const footer = document.querySelector('.oracle-footer');
+    if (footer) footer.style.display = 'none';
 
-    // Mostrar pantalla de evaluación
-    this.steps.forEach(st => st.classList.remove('active'));
+    this.steps.forEach(st => st && st.classList.remove('active'));
     const evalStage = document.getElementById('oracle-stage-evaluating');
-    evalStage.classList.add('active');
+    if (evalStage) evalStage.classList.add('active');
 
     const statusDetail = document.getElementById('eval-detail-text');
 
     const sequence = [
-      { text: 'Sincronizando con los núcleos de Inteligencia Artificial...', time: 1000 },
-      { text: 'Decodificando tu resonancia arquetípica cósmica...', time: 2200 },
-      { text: 'Auditando autenticidad del pulso de vulnerabilidad humana...', time: 3500 },
-      { text: 'Convergencia aprobada. Consagrando acceso...', time: 4800 }
+      { text: 'Sincronizando con los núcleos de Inteligencia Artificial...', time: 800 },
+      { text: 'Decodificando tu resonancia arquetípica cósmica...', time: 1800 },
+      { text: 'Auditando autenticidad del pulso de vulnerabilidad humana...', time: 3000 },
+      { text: 'Convergencia aprobada. Consagrando perfil...', time: 4200 }
     ];
 
     sequence.forEach(item => {
@@ -223,23 +270,22 @@ class MysticOracle {
 
     setTimeout(() => {
       this.revealVerdict();
-    }, 5500);
+    }, 4800);
   }
 
   revealVerdict() {
     this.currentStep = 5;
-    this.steps.forEach(st => st.classList.remove('active'));
+    this.steps.forEach(st => st && st.classList.remove('active'));
     const verdictStage = document.getElementById('oracle-stage-verdict');
-    verdictStage.classList.add('active');
+    if (verdictStage) verdictStage.classList.add('active');
 
     if (window.mysticAudio) {
       window.mysticAudio.playChime('success');
     }
 
-    // Calcular sinastría inicial basada en las respuestas
     const scoreVal = document.getElementById('user-synastry-score');
     if (scoreVal) {
-      scoreVal.textContent = '98.7%';
+      scoreVal.textContent = '99.4%';
     }
   }
 
@@ -250,27 +296,14 @@ class MysticOracle {
       window.authOracle.completeOracleRegistration(this.answers);
     } else if (window.datingApp) {
       window.datingApp.showDatingApp();
-    } else {
-      const landingHero = document.getElementById('hero-section');
-      const landingGates = document.getElementById('gates-preview-section');
-      const sanctuarySection = document.getElementById('sanctuary-section');
-
-      if (landingHero) landingHero.style.display = 'none';
-      if (landingGates) landingGates.style.display = 'none';
-
-      if (sanctuarySection) {
-        sanctuarySection.classList.add('unlocked');
-        sanctuarySection.scrollIntoView({ behavior: 'smooth' });
-      }
     }
 
-    // Desplegar Toast
-    this.showToast('✨ Portal consagrado: Bienvenido a la aplicación de citas Mística.');
+    this.showToast('✨ Portal consagrado: Bienvenido a MÍSTIKA Dating App.');
   }
 
   showError(msg) {
     if (this.errorMsg) {
-      this.errorMsg.textContent = msg;
+      this.errorMsg.innerHTML = `<i class="fas fa-exclamation-circle"></i> <span>${msg}</span>`;
       this.errorMsg.classList.add('visible');
     }
   }
@@ -292,7 +325,7 @@ class MysticOracle {
     toast.classList.add('show');
     setTimeout(() => {
       toast.classList.remove('show');
-    }, 4500);
+    }, 4000);
   }
 }
 

@@ -1,21 +1,26 @@
-/* Oracle Modal & Ritual Gateway */
+/* ============================================================
+   ORÁCULO DE MÍSTIKA — PORTAL RITUAL & EVALUACIÓN CEREMONIAL
+   Aesthetically Elite • Glassmorphism • Responsive Mobile-First
+   ============================================================ */
+
 .oracle-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(4, 2, 8, 0.88);
+  background: rgba(4, 2, 8, 0.94);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  z-index: 1000;
+  z-index: 6000;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  padding: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 16px;
+  overflow-y: auto;
 }
 
 .oracle-modal-overlay.active {
@@ -26,68 +31,69 @@
 .oracle-sanctum {
   position: relative;
   width: 100%;
-  max-width: 680px;
-  background: linear-gradient(165deg, rgba(23, 16, 38, 0.95) 0%, rgba(9, 6, 16, 0.98) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.35);
+  max-width: 620px;
+  background: linear-gradient(165deg, rgba(22, 14, 38, 0.98) 0%, rgba(8, 5, 14, 0.99) 100%);
+  border: 1px solid var(--accent-gold);
   border-radius: 28px;
-  padding: 3rem 2.8rem;
-  box-shadow: 0 0 60px rgba(139, 92, 246, 0.25), 0 25px 60px -15px rgba(0, 0, 0, 0.9);
-  transform: scale(0.92) translateY(20px);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow: hidden;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 0 60px rgba(139, 92, 246, 0.3), 0 25px 60px rgba(0, 0, 0, 0.95);
+  transform: scale(0.94) translateY(15px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  margin: auto;
 }
 
 .oracle-modal-overlay.active .oracle-sanctum {
   transform: scale(1) translateY(0);
 }
 
-/* Close Ritual Button */
+/* Botón Cerrar Ritual */
 .oracle-close-btn {
   position: absolute;
-  top: 20px;
-  right: 22px;
+  top: 18px;
+  right: 18px;
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: var(--transition-smooth);
+  z-index: 10;
 }
 .oracle-close-btn:hover {
   color: #fff;
-  border-color: var(--gold-primary);
+  border-color: var(--accent-gold);
   background: rgba(212, 175, 55, 0.15);
   transform: rotate(90deg);
 }
 
-/* Oracle Header */
+/* Header del Oráculo */
 .oracle-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
   position: relative;
 }
 
 .oracle-orb-wrapper {
   position: relative;
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 1.2rem;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .oracle-orb {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #fde68a, #d4af37 40%, #7e22ce 85%);
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.5);
+  background: radial-gradient(circle at 35% 35%, #fff2b2, var(--accent-gold) 45%, #7e22ce 90%);
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.65), inset 0 0 15px rgba(255, 255, 255, 0.5);
   animation: orbLevitate 4s ease-in-out infinite alternate;
 }
 .oracle-rune-ring {
@@ -95,104 +101,103 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 1px dashed rgba(212, 175, 55, 0.45);
-  animation: rotateSigil 16s linear infinite;
+  border: 1.5px dashed rgba(212, 175, 55, 0.5);
+  animation: rotateSigil 20s linear infinite;
 }
 @keyframes orbLevitate {
   0% { transform: translateY(0) scale(0.96); filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4)); }
-  100% { transform: translateY(-6px) scale(1.04); filter: drop-shadow(0 0 28px rgba(168, 85, 247, 0.7)); }
+  100% { transform: translateY(-5px) scale(1.05); filter: drop-shadow(0 0 28px rgba(168, 85, 247, 0.7)); }
 }
 
 .oracle-title {
   font-family: var(--font-ceremony);
-  font-size: 1.85rem;
+  font-size: 1.7rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   color: #fff;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 .oracle-subtitle {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
 }
 
-/* Steps Progress Indicator */
+/* Indicador de 3 Pasos con Línea de Progreso */
 .oracle-stepper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 12px;
+  margin-bottom: 1.8rem;
   position: relative;
 }
 .step-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
+  gap: 6px;
+  font-size: 0.76rem;
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
   transition: var(--transition-smooth);
 }
 .step-number {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   background: rgba(255, 255, 255, 0.03);
 }
 .step-item.active {
-  color: var(--gold-light);
+  color: var(--accent-gold);
 }
 .step-item.active .step-number {
-  border-color: var(--gold-primary);
+  border-color: var(--accent-gold);
   background: rgba(212, 175, 55, 0.2);
-  color: var(--gold-primary);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+  color: var(--accent-gold);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
 .step-item.completed {
-  color: var(--emerald-aura);
+  color: var(--accent-green);
 }
 .step-item.completed .step-number {
-  border-color: var(--emerald-aura);
+  border-color: var(--accent-green);
   background: rgba(16, 185, 129, 0.2);
-  color: var(--emerald-aura);
+  color: var(--accent-green);
 }
 .step-divider {
-  width: 32px;
+  width: 28px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
 }
 
-/* Question Stage Container */
+/* Etapas de Pregunta */
 .oracle-stage {
   display: none;
-  animation: stageFadeIn 0.5s ease forwards;
+  animation: stageFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 .oracle-stage.active {
   display: block;
 }
 @keyframes stageFadeIn {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Question Prompt Box */
 .question-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 5px 14px;
+  padding: 5px 12px;
   border-radius: 999px;
   font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 .question-badge.ai-badge {
   background: rgba(139, 92, 246, 0.18);
@@ -208,130 +213,232 @@
 .question-text {
   font-family: var(--font-ceremony);
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.45;
   color: #fff;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 .question-hint {
-  font-size: 0.86rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+  margin-bottom: 1.4rem;
+  line-height: 1.5;
 }
 
-/* Option Cards (Interactive Choices) */
+/* Opciones Táctiles de Preguntas 1 y 2 */
 .options-stack {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1.8rem;
+  gap: 10px;
+  margin-bottom: 1.5rem;
 }
+
 .option-btn {
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 1rem 1.25rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1rem 1.15rem;
   text-align: left;
-  color: var(--text-secondary);
+  color: #e2e8f0;
   font-size: 0.92rem;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 12px;
-  transition: var(--transition-smooth);
+  gap: 14px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  outline: none;
 }
+
 .option-btn:hover {
   background: rgba(212, 175, 55, 0.08);
-  border-color: rgba(212, 175, 55, 0.35);
+  border-color: rgba(212, 175, 55, 0.4);
   color: #fff;
   transform: translateX(4px);
 }
-.option-btn.selected {
-  background: rgba(139, 92, 246, 0.16);
-  border-color: var(--violet-vivid);
-  color: #fff;
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
-}
-.option-rune {
-  font-family: var(--font-ceremony);
-  color: var(--gold-primary);
-  font-weight: 700;
-  width: 24px;
+
+.option-btn:active {
+  transform: scale(0.98);
 }
 
-/* Human Input Field (Question 3) */
+/* Estado Seleccionado Radiante */
+.option-btn.selected {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(139, 92, 246, 0.22));
+  border-color: var(--accent-gold);
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+.option-btn.selected .option-rune-box {
+  background: var(--accent-gold);
+  color: #08050e;
+  box-shadow: 0 0 15px var(--accent-gold);
+}
+
+.option-rune-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-ceremony);
+  color: var(--accent-gold);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+
+.option-text-wrap {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.option-check-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: transparent;
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+
+.option-btn.selected .option-check-circle {
+  border-color: var(--accent-gold);
+  background: var(--accent-gold);
+  color: #08050e;
+}
+
+/* Pregunta 3 (Humana): Chips de Inspiración Rápida */
+.inspiration-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.inspire-chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(244, 63, 94, 0.12);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  color: #fecdd3;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.inspire-chip:hover, .inspire-chip:active {
+  background: rgba(244, 63, 94, 0.25);
+  border-color: var(--accent-red);
+  transform: translateY(-2px);
+}
+
 .human-input-wrapper {
   position: relative;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.5rem;
 }
+
 .human-textarea {
   width: 100%;
-  min-height: 120px;
-  background: rgba(10, 7, 18, 0.7);
-  border: 1px solid rgba(244, 63, 94, 0.3);
+  min-height: 110px;
+  background: rgba(10, 7, 18, 0.8);
+  border: 1.5px solid rgba(244, 63, 94, 0.35);
   border-radius: 16px;
-  padding: 1.1rem;
+  padding: 1rem;
   color: #fff;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   resize: vertical;
   outline: none;
   transition: var(--transition-smooth);
 }
+
 .human-textarea:focus {
-  border-color: var(--rose-mystic);
-  box-shadow: 0 0 25px rgba(244, 63, 94, 0.25);
+  border-color: var(--accent-red);
+  box-shadow: 0 0 25px rgba(244, 63, 94, 0.3);
 }
+
 .human-char-counter {
   position: absolute;
-  bottom: 12px;
-  right: 14px;
-  font-size: 0.75rem;
+  bottom: 10px;
+  right: 12px;
+  font-size: 0.74rem;
   color: var(--text-muted);
 }
 
-/* Modal Bottom Navigation */
+/* Notificación de Error Elegante */
+.oracle-error-msg {
+  background: rgba(244, 63, 94, 0.15);
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  color: #fca5a5;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  margin-bottom: 1.2rem;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  animation: shakeError 0.4s ease;
+}
+
+.oracle-error-msg.visible {
+  display: flex;
+}
+
+@keyframes shakeError {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+/* Footer del Oráculo */
 .oracle-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.2rem;
+  padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
+
 .btn-oracle-back {
   background: transparent;
   border: none;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   cursor: pointer;
   font-size: 0.85rem;
   display: flex;
   align-items: center;
   gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
   transition: var(--transition-smooth);
 }
 .btn-oracle-back:hover {
   color: #fff;
-}
-.oracle-error-msg {
-  color: #fb7185;
-  font-size: 0.82rem;
-  margin-bottom: 0.8rem;
-  display: none;
-}
-.oracle-error-msg.visible {
-  display: block;
+  background: rgba(255, 255, 255, 0.05);
 }
 
-/* Stage: Oracle Analyzing State */
+/* Escáner Astral de Evaluación */
 .evaluating-container {
   text-align: center;
-  padding: 2.5rem 1rem;
+  padding: 2rem 1rem;
 }
 .astral-scanner {
   position: relative;
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 2rem;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 1.8rem;
 }
 .scanner-ring {
   position: absolute;
@@ -341,83 +448,76 @@
   height: 100%;
   border-radius: 50%;
   border: 2px solid transparent;
-  border-top-color: var(--gold-primary);
-  border-right-color: var(--violet-vivid);
-  animation: rotateSigil 1.8s linear infinite;
+  border-top-color: var(--accent-gold);
+  border-right-color: var(--accent-violet);
+  animation: rotateSigil 1.6s linear infinite;
 }
 .scanner-core {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--gold-primary), var(--violet-deep));
-  box-shadow: 0 0 30px var(--gold-glow);
-  animation: pulseScanner 1s infinite alternate;
-}
-@keyframes pulseScanner {
-  0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.7; }
-  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+  background: radial-gradient(circle, var(--accent-gold), #4c1d95);
+  box-shadow: 0 0 30px var(--accent-gold-glow);
+  animation: pulseDot 1.2s infinite alternate;
 }
 .eval-status-text {
   font-family: var(--font-ceremony);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   color: #fff;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
 }
 .eval-step-detail {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
-/* Stage: Verdict Success Access */
+/* Veredicto de Consagración */
 .verdict-container {
   text-align: center;
-  padding: 1.5rem 0.5rem;
+  padding: 1rem 0;
 }
 .verdict-sigil {
-  font-size: 3.5rem;
-  color: var(--gold-primary);
-  margin-bottom: 1rem;
+  font-size: 3.2rem;
+  color: var(--accent-gold);
+  margin-bottom: 0.8rem;
   filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.7));
   animation: pulseDot 3s infinite ease-in-out;
 }
 .verdict-title {
   font-family: var(--font-ceremony);
-  font-size: 1.8rem;
-  color: var(--gold-light);
-  margin-bottom: 0.8rem;
+  font-size: 1.7rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
 }
 .verdict-desc {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.7;
-  max-width: 480px;
-  margin: 0 auto 1.8rem;
+  line-height: 1.6;
+  max-width: 460px;
+  margin: 0 auto 1.6rem;
 }
 .resonance-meter-box {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  border-radius: 18px;
-  padding: 1.2rem;
-  margin-bottom: 2rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 1.8rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.resonance-item {
-  text-align: center;
-}
 .res-val {
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #fff;
   font-weight: 700;
 }
 .res-label {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
